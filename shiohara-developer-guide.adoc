@@ -1,7 +1,31 @@
-= Viglet Shiohara CMS - Guia do Desenvolvedor
+= Viglet Shiohara CMS: Guia do Desenvolvedor
+Viglet Team <opensource@viglet.com>
+:toc: left
+:toc-title: Tabela de Conteúdo
+:doctype: book
+:revnumber: 0.3.6 
+:revdate: 25-11-2019
 
-== Capítulo 1. Introdução
+[preface]
+= Prefácio
 
+The basis for this documentation germinated when I awoke one morning and was confronted by the dark and stormy eyes of the chinchilla.
+She had conquered the mountain of government reports that, over the course of six months, had eroded into several minor foothills and a creeping alluvial plain of loose papers.
+
+== Sobre o Autor
+
+Você pode contactar Alexandre Oliveira em alexandre.oliveira@viglet.com.
+
+Alexandre Oliveira adora desenvolvimento de aplicações corporativas.
+
+[dedication]
+= Dedicatória
+
+Este livro é dedicado ao Enrico Shiohara, que ensinou tudo que sei sobre CMS.
+
+= Capítulo 1. Introdução
+[partintro]
+--
 Neste capítulo provém conceitos e outras informações requeridas para realizar tarefas de desenvolvimento do Shiohara CMS
 
 Incluem os seguintes tópicos:
@@ -9,8 +33,9 @@ Incluem os seguintes tópicos:
 * "<<1.1. Sobre o Shiohara CMS>>"
 * "<<1.2. O que será coberto neste livro>>"
 * "Documentações requeridas" na página 15
+--
 
-=== 1.1. Sobre o Shiohara CMS
+== 1.1. Sobre o Shiohara CMS
 
 O Viglet Shiohara CMS permite administradores e contribuidores usarem uma interface gráfica para definir como o conteúdo é apresentado nos web sites. A área de **Temas** é onde são gerenciados os objetos de apresentação. O **View Page** mostra a página completamente renderizada.
 
@@ -21,7 +46,7 @@ Existem 2 tipos de visualização do site: **Management** e **Publicado**, onde:
 
 O Shiohara CMS tem Page Layouts e Regions de exemplo, que podem ser vistos quando é criado o site, e pode servir de ponto de partida para criar seu site. Além disto possui formas de desenvolver e personalizar de forma programática estes templates, em que iremos discutir neste documento.
 
-=== 1.1.1 Page Layouts e Regions
+== 1.1.1 Page Layouts e Regions
 
 Um Page Layout é um bloco básico de construção para criar e gerenciar paginas usando padões repetidos. Cada página gerada é associada com exatamente um Page Layout, que controla o layout, tema e regiões na página.
 
@@ -37,7 +62,7 @@ Uma região é uma área da página onde o conteúdo é renderizado. Os modelos 
 .Mostra um template com quatro regiões.
 image::assets/page-layout-4-regions.png[width="50%" height="50%"]
 
-=== 1.1.2 API para Componentes
+== 1.1.2 API para Componentes
 
 Em Page Layots e Regiões podem ter API para Componentes, que são responsávels poder renderizar tipos diferentes de fontes de conteúdos do repositório do Shiohara CMS. Por exemplo, um **Query Component** pode ser usado para filtar uma lista de conteúdos de uma pasta, enquanto um **Navigation Component** pode renderizar as pastas como menus em seu site.
 
@@ -54,7 +79,7 @@ A estrutura hierárquica deste template e suas regioes com API de Componentes é
 . Região de Conteúdo: Query Component
 . Região do Rodapé: Navigation Component
 
-=== 1.2. O que será coberto neste livro
+== 1.2. O que será coberto neste livro
 
 Na tabela abaixo, resume os tópico que serão cobertos neste documento e como eles são aplicados no desenvolvimento do Shiohara CMS.
 .Tópicos neste Livro
@@ -105,3 +130,9 @@ Na tabela abaixo, resume os tópico que serão cobertos neste documento e como e
 | Construa e deploye suas aplicação
 | "Construindo e Deployando Aplicações/Extensões" página 131
 |===
+
+[glossary]
+= Glossário
+
+[glossary]
+book:: livro, documento

@@ -5,7 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
-<title>Viglet Shiohara CMS - Guia do Desenvolvedor</title>
+<meta name="author" content="Viglet Team">
+<title>Viglet Shiohara CMS: Guia do Desenvolvedor</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -436,14 +437,65 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
 </head>
-<body class="article">
+<body class="book toc2 toc-left">
 <div id="header">
-<h1>Viglet Shiohara CMS - Guia do Desenvolvedor</h1>
+<h1>Viglet Shiohara CMS: Guia do Desenvolvedor</h1>
+<div class="details">
+<span id="author" class="author">Viglet Team</span><br>
+<span id="email" class="email"><a href="mailto:opensource@viglet.com">opensource@viglet.com</a></span><br>
+<span id="revnumber">version 0.3.6,</span>
+<span id="revdate">25-11-2019</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Tabela de Conteúdo</div>
+<ul class="sectlevel1">
+<li><a href="#_prefácio">Prefácio</a></li>
+<li><a href="#_sobre_o_autor">Sobre o Autor</a></li>
+<li><a href="#_dedicatória">Dedicatória</a></li>
+<li><a href="#_capítulo_1_introdução">Capítulo 1. Introdução</a>
+<ul class="sectlevel1">
+<li><a href="#_1_1_sobre_o_shiohara_cms">1.1. Sobre o Shiohara CMS</a></li>
+<li><a href="#_1_1_1_page_layouts_e_regions">1.1.1 Page Layouts e Regions</a></li>
+<li><a href="#_1_1_2_api_para_componentes">1.1.2 API para Componentes</a></li>
+<li><a href="#_1_2_o_que_será_coberto_neste_livro">1.2. O que será coberto neste livro</a></li>
+</ul>
+</li>
+<li><a href="#_glossário">Glossário</a></li>
+</ul>
+</div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_capítulo_1_introdução">Capítulo 1. Introdução</h2>
+<h2 id="_prefácio">Prefácio</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>The basis for this documentation germinated when I awoke one morning and was confronted by the dark and stormy eyes of the chinchilla.
+She had conquered the mountain of government reports that, over the course of six months, had eroded into several minor foothills and a creeping alluvial plain of loose papers.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_sobre_o_autor">Sobre o Autor</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Você pode contactar Alexandre Oliveira em <a href="mailto:alexandre.oliveira@viglet.com">alexandre.oliveira@viglet.com</a>.</p>
+</div>
+<div class="paragraph">
+<p>Alexandre Oliveira adora desenvolvimento de aplicações corporativas.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_dedicatória">Dedicatória</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Este livro é dedicado ao Enrico Shiohara, que ensinou tudo que sei sobre CMS.</p>
+</div>
+</div>
+</div>
+<h1 id="_capítulo_1_introdução" class="sect0">Capítulo 1. Introdução</h1>
+<div class="openblock partintro">
+<div class="content">
 <div class="paragraph">
 <p>Neste capítulo provém conceitos e outras informações requeridas para realizar tarefas de desenvolvimento do Shiohara CMS</p>
 </div>
@@ -463,8 +515,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </div>
-<div class="sect2">
-<h3 id="_1_1_sobre_o_shiohara_cms">1.1. Sobre o Shiohara CMS</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_1_1_sobre_o_shiohara_cms">1.1. Sobre o Shiohara CMS</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>O Viglet Shiohara CMS permite administradores e contribuidores usarem uma interface gráfica para definir como o conteúdo é apresentado nos web sites. A área de <strong>Temas</strong> é onde são gerenciados os objetos de apresentação. O <strong>View Page</strong> mostra a página completamente renderizada.</p>
 </div>
@@ -485,8 +540,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>O Shiohara CMS tem Page Layouts e Regions de exemplo, que podem ser vistos quando é criado o site, e pode servir de ponto de partida para criar seu site. Além disto possui formas de desenvolver e personalizar de forma programática estes templates, em que iremos discutir neste documento.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_1_1_1_page_layouts_e_regions">1.1.1 Page Layouts e Regions</h3>
+</div>
+<div class="sect1">
+<h2 id="_1_1_1_page_layouts_e_regions">1.1.1 Page Layouts e Regions</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Um Page Layout é um bloco básico de construção para criar e gerenciar paginas usando padões repetidos. Cada página gerada é associada com exatamente um Page Layout, que controla o layout, tema e regiões na página.</p>
 </div>
@@ -509,8 +566,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="title">Figure 1. Mostra um template com quatro regiões.</div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_1_1_2_api_para_componentes">1.1.2 API para Componentes</h3>
+</div>
+<div class="sect1">
+<h2 id="_1_1_2_api_para_componentes">1.1.2 API para Componentes</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Em Page Layots e Regiões podem ter API para Componentes, que são responsávels poder renderizar tipos diferentes de fontes de conteúdos do repositório do Shiohara CMS. Por exemplo, um <strong>Query Component</strong> pode ser usado para filtar uma lista de conteúdos de uma pasta, enquanto um <strong>Navigation Component</strong> pode renderizar as pastas como menus em seu site.</p>
 </div>
@@ -543,8 +602,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ol>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_1_2_o_que_será_coberto_neste_livro">1.2. O que será coberto neste livro</h3>
+</div>
+<div class="sect1">
+<h2 id="_1_2_o_que_será_coberto_neste_livro">1.2. O que será coberto neste livro</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Na tabela abaixo, resume os tópico que serão cobertos neste documento e como eles são aplicados no desenvolvimento do Shiohara CMS.
 .Tópicos neste Livro</p>
@@ -607,11 +668,24 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </table>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_glossário">Glossário</h2>
+<div class="sectionbody">
+<div class="dlist glossary">
+<dl>
+<dt>book</dt>
+<dd>
+<p>livro, documento</p>
+</dd>
+</dl>
+</div>
+</div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-11-25 18:32:14 -0300
+Version 0.3.6<br>
+Last updated 2019-11-25 19:56:53 -0300
 </div>
 </div>
 </body>
