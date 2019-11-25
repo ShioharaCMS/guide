@@ -1,0 +1,4 @@
+#!/bin/bash
+
+asciidoctor shiohara-developer-guide.adoc
+asciidoctor -T slim -b viglet shiohara-developer-guide.adoc
