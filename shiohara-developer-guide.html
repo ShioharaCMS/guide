@@ -452,37 +452,25 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_prefácio">Prefácio</a></li>
 <li><a href="#_sobre_o_autor">Sobre o Autor</a></li>
 <li><a href="#_dedicatória">Dedicatória</a></li>
-<li><a href="#_capítulo_1_introdução">Capítulo 1. Introdução</a>
-<ul class="sectlevel1">
-<li><a href="#_1_1_sobre_o_shiohara_cms">1.1. Sobre o Shiohara CMS</a></li>
-<li><a href="#_1_1_1_page_layouts_e_regions">1.1.1 Page Layouts e Regions</a></li>
-<li><a href="#_1_1_2_api_para_componentes">1.1.2 API para Componentes</a></li>
-<li><a href="#_1_2_o_que_será_coberto_neste_livro">1.2. O que será coberto neste livro</a></li>
-<li><a href="#_1_3_documentações_necessárias">1.3. Documentações necessárias</a></li>
-</ul>
-</li>
-<li><a href="#_capítulo_2_arquitetura_de_implementação">Capítulo 2. Arquitetura de Implementação</a>
-<ul class="sectlevel1">
-<li><a href="#_2_1_visão_geral">2.1. Visão Geral</a></li>
-<li><a href="#_2_2_diagrama_de_implementação">2.2. Diagrama de Implementação</a></li>
-<li><a href="#_2_3_tabela_de_deploy">2.3. Tabela de Deploy</a></li>
-<li><a href="#_2_4_explicação_do_diagrama_e_da_tabela">2.4. Explicação do Diagrama e da Tabela</a>
+<li><a href="#_introdução">1. Introdução</a>
 <ul class="sectlevel2">
-<li><a href="#_2_4_1_viglet_shiohara_jar">2.4.1. viglet.shiohara.jar</a></li>
-<li><a href="#_2_4_2_viglet_shiohara_conf">2.4.2. viglet-shiohara.conf</a></li>
+<li><a href="#_sobre_o_shiohara_cms">1.1. Sobre o Shiohara CMS</a></li>
+<li><a href="#_o_que_será_coberto_neste_livro">1.2. O que será coberto neste livro</a></li>
+<li><a href="#_documentações_necessárias">1.3. Documentações necessárias</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><a href="#_capítulo_3_criando_page_layouts">Capítulo 3. Criando Page Layouts</a>
-<ul class="sectlevel1">
-<li><a href="#_3_1_javascript">3.1. Javascript</a></li>
-<li><a href="#_3_2_desenvolvendo_regiões">3.2. Desenvolvendo Regiões</a>
+<li><a href="#_arquitetura_de_implementação">2. Arquitetura de Implementação</a>
 <ul class="sectlevel2">
-<li><a href="#_3_2_1_para_que_um_região_é_usada">3.2.1 Para que um Região é usada</a></li>
-<li><a href="#_3_2_3_utilizando_url_de_imagens_e_conteúdos">3.2.3 Utilizando URL de Imagens e Conteúdos</a></li>
+<li><a href="#_visão_geral">2.1. Visão Geral</a></li>
+<li><a href="#_diagrama_de_implementação">2.2. Diagrama de Implementação</a></li>
+<li><a href="#_tabela_de_deploy">2.3. Tabela de Deploy</a></li>
+<li><a href="#_explicação_do_diagrama_e_da_tabela">2.4. Explicação do Diagrama e da Tabela</a></li>
 </ul>
 </li>
+<li><a href="#_criando_page_layouts">3. Criando Page Layouts</a>
+<ul class="sectlevel2">
+<li><a href="#_javascript">3.1. Javascript</a></li>
+<li><a href="#_desenvolvendo_regiões">3.2. Desenvolvendo Regiões</a></li>
 </ul>
 </li>
 <li><a href="#_glossário">Glossário</a></li>
@@ -518,9 +506,9 @@ She had conquered the mountain of government reports that, over the course of si
 </div>
 </div>
 </div>
-<h1 id="_capítulo_1_introdução" class="sect0">Capítulo 1. Introdução</h1>
-<div class="openblock partintro">
-<div class="content">
+<div class="sect1">
+<h2 id="_introdução">1. Introdução</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Neste capítulo provém conceitos e outras informações requeridas para realizar tarefas de desenvolvimento do Shiohara CMS</p>
 </div>
@@ -530,21 +518,18 @@ She had conquered the mountain of government reports that, over the course of si
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#_1_1_sobre_o_shiohara_cms">1.1. Sobre o Shiohara CMS</a></p>
+<p><a href="#_sobre_o_shiohara_cms">Sobre o Shiohara CMS</a></p>
 </li>
 <li>
-<p><a href="#_1_2_o_que_será_coberto_neste_livro">1.2. O que será coberto neste livro</a></p>
+<p><a href="#_o_que_será_coberto_neste_livro">O que será coberto neste livro</a></p>
 </li>
 <li>
-<p><a href="#_1_3_documentações_necessárias">1.3. Documentações necessárias</a></p>
+<p><a href="#_documentações_necessárias">Documentações necessárias</a></p>
 </li>
 </ul>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_1_1_sobre_o_shiohara_cms">1.1. Sobre o Shiohara CMS</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_sobre_o_shiohara_cms">1.1. Sobre o Shiohara CMS</h3>
 <div class="paragraph">
 <p>O Viglet Shiohara CMS permite administradores e contribuidores usarem uma interface gráfica para definir como o conteúdo é apresentado nos web sites. A área de <strong>Temas</strong> é onde são gerenciados os objetos de apresentação. O <strong>View Page</strong> mostra a página completamente renderizada.</p>
 </div>
@@ -564,11 +549,8 @@ She had conquered the mountain of government reports that, over the course of si
 <div class="paragraph">
 <p>O Shiohara CMS tem Page Layouts e Regions de exemplo, que podem ser vistos quando é criado o site, e pode servir de ponto de partida para criar seu site. Além disto possui formas de desenvolver e personalizar de forma programática estes templates, em que iremos discutir neste documento.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_1_1_1_page_layouts_e_regions">1.1.1 Page Layouts e Regions</h2>
-<div class="sectionbody">
+<div class="sect3">
+<h4 id="_page_layouts_e_regions">1.1.1. Page Layouts e Regions</h4>
 <div class="paragraph">
 <p>Um Page Layout é um bloco básico de construção para criar e gerenciar paginas usando padões repetidos. Cada página gerada é associada com exatamente um Page Layout, que controla o layout, tema e regiões na página.</p>
 </div>
@@ -591,10 +573,8 @@ She had conquered the mountain of government reports that, over the course of si
 <div class="title">Figure 1. Mostra um template com quatro regiões.</div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_1_1_2_api_para_componentes">1.1.2 API para Componentes</h2>
-<div class="sectionbody">
+<div class="sect3">
+<h4 id="_api_para_componentes">1.1.2. API para Componentes</h4>
 <div class="paragraph">
 <p>Em Page Layots e Regiões podem ter API para Componentes, que são responsávels poder renderizar tipos diferentes de fontes de conteúdos do repositório do Shiohara CMS. Por exemplo, um <strong>Query Component</strong> pode ser usado para filtar uma lista de conteúdos de uma pasta, enquanto um <strong>Navigation Component</strong> pode renderizar as pastas como menus em seu site.</p>
 </div>
@@ -607,30 +587,43 @@ She had conquered the mountain of government reports that, over the course of si
 <div class="paragraph">
 <p>A estrutura hierárquica deste template e suas regioes com API de Componentes é da seguinte forma:</p>
 </div>
-<div class="paragraph">
-<p><strong>Page Layout</strong></p>
+<div class="dlist">
+<div class="title">Page Layout</div>
+<dl>
+<dt class="hdlist1">Região de Cabeçalho</dt>
+<dd>
+<p>Navigation Component</p>
+</dd>
+<dt class="hdlist1">Região de Navegação</dt>
+<dd>
+<p>Navigation Component</p>
+</dd>
+<dt class="hdlist1">Região de Conteúdo</dt>
+<dd>
+<p>Query Component</p>
+</dd>
+<dt class="hdlist1">Região do Rodapé</dt>
+<dd>
+<p>Navigation Component</p>
+</dd>
+</dl>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Região de Cabeçalho: Navigation Component</p>
-</li>
-<li>
-<p>Região de Navegação: Navigation Component</p>
-</li>
-<li>
-<p>Região de Conteúdo: Query Component</p>
-</li>
-<li>
-<p>Região do Rodapé: Navigation Component</p>
-</li>
-</ol>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+The header is optional.
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
-<div class="sect1">
-<h2 id="_1_2_o_que_será_coberto_neste_livro">1.2. O que será coberto neste livro</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_o_que_será_coberto_neste_livro">1.2. O que será coberto neste livro</h3>
 <div class="paragraph">
 <p>Na tabela abaixo, resume os tópico que serão cobertos neste documento e como eles são aplicados no desenvolvimento do Shiohara CMS.
 .Tópicos neste Livro</p>
@@ -692,50 +685,44 @@ She had conquered the mountain of government reports that, over the course of si
 </tbody>
 </table>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_1_3_documentações_necessárias">1.3. Documentações necessárias</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_documentações_necessárias">1.3. Documentações necessárias</h3>
 <div class="paragraph">
 <p>Para outras documentações sobre o Shiohara CMS, incluindo Javadoc, Javascript API, vá em Getting Started (<a href="https://shiohara.readme.io/docs" class="bare">https://shiohara.readme.io/docs</a>).</p>
 </div>
 </div>
 </div>
-<h1 id="_capítulo_2_arquitetura_de_implementação" class="sect0">Capítulo 2. Arquitetura de Implementação</h1>
-<div class="openblock partintro">
-<div class="content">
+</div>
+<div class="sect1">
+<h2 id="_arquitetura_de_implementação">2. Arquitetura de Implementação</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Neste capítulo descreve e ilustra aplicações, componentes e arquivos que são implementados com o Shiohara CMS incluindo os seguintes tópicos:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#_2_1_visão_geral">2.1. Visão Geral</a></p>
+<p><a href="#_visão_geral">Visão Geral</a></p>
 </li>
 <li>
-<p><a href="#_2_2_diagrama_de_implementação">2.2. Diagrama de Implementação</a></p>
+<p><a href="#_diagrama_de_implementação">Diagrama de Implementação</a></p>
 </li>
 <li>
-<p><a href="#_2_3_tabela_de_deploy">2.3. Tabela de Deploy</a></p>
+<p><a href="#_tabela_de_deploy">Tabela de Deploy</a></p>
 </li>
 <li>
-<p><a href="#_2_4_explicação_do_diagrama_e_da_tabela">2.4. Explicação do Diagrama e da Tabela</a></p>
+<p><a href="#_explicação_do_diagrama_e_da_tabela">Explicação do Diagrama e da Tabela</a></p>
 </li>
 </ul>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_2_1_visão_geral">2.1. Visão Geral</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_visão_geral">2.1. Visão Geral</h3>
 <div class="paragraph">
 <p>Para personalizar o Shiohara CMS, você deve implementar Java Archive (JAR) nas seguintes localizações:</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_2_2_diagrama_de_implementação">2.2. Diagrama de Implementação</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_diagrama_de_implementação">2.2. Diagrama de Implementação</h3>
 <div id="deployment-diagram" class="imageblock">
 <div class="content">
 <img src="assets/deployment-diagram.png" alt="deployment diagram" width="50%" height="50%">
@@ -743,10 +730,8 @@ She had conquered the mountain of government reports that, over the course of si
 <div class="title">Figure 3. Mostra a implementação de arquitetura do Shiohara CMS em detalhes e subsequente sessões discutidas nesta arquitetura.</div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_2_3_tabela_de_deploy">2.3. Tabela de Deploy</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_tabela_de_deploy">2.3. Tabela de Deploy</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 33.3333%;">
@@ -774,51 +759,41 @@ She had conquered the mountain of government reports that, over the course of si
 </tbody>
 </table>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_2_4_explicação_do_diagrama_e_da_tabela">2.4. Explicação do Diagrama e da Tabela</h2>
-<div class="sectionbody">
 <div class="sect2">
-<h3 id="_2_4_1_viglet_shiohara_jar">2.4.1. viglet.shiohara.jar</h3>
+<h3 id="_explicação_do_diagrama_e_da_tabela">2.4. Explicação do Diagrama e da Tabela</h3>
+<div class="sect3">
+<h4 id="_viglet_shiohara_jar">2.4.1. viglet.shiohara.jar</h4>
 <div class="paragraph">
 <p>Este arquivo JAR é implementado quando você instala e configura o Shiohara CMS.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_2_4_2_viglet_shiohara_conf">2.4.2. viglet-shiohara.conf</h3>
+<div class="sect3">
+<h4 id="_viglet_shiohara_conf">2.4.2. viglet-shiohara.conf</h4>
 <div class="paragraph">
-<p>O arquivo viglet-shiohara.conf especifica configurações do Shiohara CMS, podendo especificar variáveis e ajustes da JVM. O Shiohara CMS é baseado no Spring Boot 2, portanto todas as configurações presentes esta solução são validas. Mais informações em: Customizing a Script When It Runs (<a href="https://docs.spring.io/spring-boot/docs/current/reference/html/deployment.html#deployment-script-customization-when-it-runs" class="bare">https://docs.spring.io/spring-boot/docs/current/reference/html/deployment.html#deployment-script-customization-when-it-runs</a>)</p>
+<p>O arquivo viglet-shiohara.conf especifica configurações do Shiohara CMS, podendo especificar variáveis e ajustes da JVM. O Shiohara CMS é baseado no Spring Boot 2, portanto todas as configurações presentes esta solução são validas. Mais informações em: <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/deployment.html#deployment-script-customization-when-it-runs" target="_blank" rel="noopener">Customizing a Script When It Runs</a></p>
 </div>
 </div>
 </div>
 </div>
-<h1 id="_capítulo_3_criando_page_layouts" class="sect0">Capítulo 3. Criando Page Layouts</h1>
-<div class="openblock partintro">
-<div class="content">
+</div>
+<div class="sect1">
+<h2 id="_criando_page_layouts">3. Criando Page Layouts</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Neste capítulo descreve os tipos de Page Layout e explica com um template é construído. Incluem os seguintes tópicos:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#_3_1_javascript">3.1. Javascript</a></p>
+<p><a href="#_javascript">Javascript</a></p>
 </li>
 <li>
-<p><a href="#_3_2_desenvolvendo_regiões">3.2. Desenvolvendo Regiões</a></p>
-</li>
-<li>
-<p><a href="#_2_3_tabela_de_deploy">2.3. Tabela de Deploy</a></p>
-</li>
-<li>
-<p><a href="#_2_4_explicação_do_diagrama_e_da_tabela">2.4. Explicação do Diagrama e da Tabela</a></p>
+<p><a href="#_desenvolvendo_regiões">Desenvolvendo Regiões</a></p>
 </li>
 </ul>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_3_1_javascript">3.1. Javascript</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_javascript">3.1. Javascript</h3>
 <div class="paragraph">
 <p>O Javascript é permitido ser utilizada em Page Layout e Region. Provendo as seguintes funcionalidades.</p>
 </div>
@@ -839,10 +814,8 @@ She had conquered the mountain of government reports that, over the course of si
 <p>As views de Javascripts precisam ser escritas em Javascript usando a bibliotecas Javascript do Viglet Shiohara, pode ser utilizado especificando o <strong>shObject</strong> em seu código. Mais informaçõesm no Javascript API (<a href="https://shioharacms.github.io/shiohara/javascript/" class="bare">https://shioharacms.github.io/shiohara/javascript/</a>)</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_3_2_desenvolvendo_regiões">3.2. Desenvolvendo Regiões</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_desenvolvendo_regiões">3.2. Desenvolvendo Regiões</h3>
 <div class="paragraph">
 <p>Shiohara CMS prove um número pré-configurado de componentes( como Navigation Component, Query Component) que simplifica a construção de uma página web.
 Cada região pode chamar um ou mais componentes.</p>
@@ -850,14 +823,14 @@ Cada região pode chamar um ou mais componentes.</p>
 <div class="paragraph">
 <p>O resultado final da região é cacheada, ao menos que time-to-live (TTL) esteja configurado para zero (0).</p>
 </div>
-<div class="sect2">
-<h3 id="_3_2_1_para_que_um_região_é_usada">3.2.1 Para que um Região é usada</h3>
+<div class="sect3">
+<h4 id="_para_que_uma_região_é_utilizada">3.2.1. Para que uma Região é utilizada</h4>
 <div class="paragraph">
 <p>Regiões são essencialmente um fragmento de renderização. O desenvolvedor web associa a região ao um Page Layout ou outra Região para criar o resultado final pretendido.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_3_2_3_utilizando_url_de_imagens_e_conteúdos">3.2.3 Utilizando URL de Imagens e Conteúdos</h3>
+<div class="sect3">
+<h4 id="_utilizando_url_de_imagens_e_conteúdos">3.2.2. Utilizando URL de Imagens e Conteúdos</h4>
 <div class="paragraph">
 <p>Quando está escrevendo uma região, se o componente contem um atributo com link ou media, as informações armazenadas são apenas IDs que precisam ser convertidos para URLs.
 Pode ser utilizado usando os seguintes métodos do shObject:</p>
@@ -874,6 +847,7 @@ Pode ser utilizado usando os seguintes métodos do shObject:</p>
 <p>generateObjectLink(id) - Gera link de qualquer objeto, podendo ser Pasta, Post ou Arquivo</p>
 </li>
 </ul>
+</div>
 </div>
 </div>
 </div>
@@ -895,7 +869,7 @@ Pode ser utilizado usando os seguintes métodos do shObject:</p>
 <div id="footer">
 <div id="footer-text">
 Version 0.3.6<br>
-Last updated 2019-11-25 21:18:12 -0300
+Last updated 2019-11-26 10:06:31 -0300
 </div>
 </div>
 </body>
