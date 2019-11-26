@@ -5,7 +5,6 @@ Viglet Team <opensource@viglet.com>
 :doctype: book
 :revnumber: 0.3.6 
 :revdate: 25-11-2019
-:numbered:
 
 [preface]
 = Prefácio
@@ -13,7 +12,6 @@ Viglet Team <opensource@viglet.com>
 The basis for this documentation germinated when I awoke one morning and was confronted by the dark and stormy eyes of the chinchilla.
 She had conquered the mountain of government reports that, over the course of six months, had eroded into several minor foothills and a creeping alluvial plain of loose papers.
 
-:numbered!:
 == Sobre o Autor
 
 Você pode contactar Alexandre Oliveira em alexandre.oliveira@viglet.com.
