@@ -30,9 +30,9 @@ Neste capítulo provém conceitos e outras informações requeridas para realiza
 
 Incluem os seguintes tópicos:
 
-* "<<1.1. Sobre o Shiohara CMS>>"
-* "<<1.2. O que será coberto neste livro>>"
-* "Documentações requeridas" na página 15
+* <<1.1. Sobre o Shiohara CMS>>
+* <<1.2. O que será coberto neste livro>>
+* <<1.3. Documentações necessárias>>
 --
 
 == 1.1. Sobre o Shiohara CMS
@@ -130,6 +130,91 @@ Na tabela abaixo, resume os tópico que serão cobertos neste documento e como e
 | Construa e deploye suas aplicação
 | "Construindo e Deployando Aplicações/Extensões" página 131
 |===
+
+== 1.3. Documentações necessárias
+
+Para outras documentações sobre o Shiohara CMS, incluindo Javadoc, Javascript API, vá em Getting Started (https://shiohara.readme.io/docs).
+
+= Capítulo 2. Arquitetura de Implementação
+[partintro]
+--
+Neste capítulo descreve e ilustra aplicações, componentes e arquivos que são implementados com o Shiohara CMS incluindo os seguintes tópicos:
+
+* <<2.1. Visão Geral>>
+* <<2.2. Diagrama de Implementação>>
+* <<2.3. Tabela de Deploy>>
+* <<2.4. Explicação do Diagrama e da Tabela>>
+--
+
+== 2.1. Visão Geral
+
+Para personalizar o Shiohara CMS, você deve implementar Java Archive (JAR) nas seguintes localizações:
+
+== 2.2. Diagrama de Implementação
+
+[#deployment-diagram]
+.Mostra a implementação de arquitetura do Shiohara CMS em detalhes e subsequente sessões discutidas nesta arquitetura.
+image::assets/deployment-diagram.png[width="50%" height="50%"]
+
+== 2.3. Tabela de Deploy
+|===
+|Diretório |Arquivo implementado |Quem provê
+
+|<SHIOHARA_DIR>/
+|viglet-shiohara.jar
+|Shiohara
+
+|<SHIOHARA_DIR>/
+|viglet-shiohara.conf
+|Você
+|===
+
+== 2.4. Explicação do Diagrama e da Tabela
+
+=== 2.4.1. viglet.shiohara.jar
+Este arquivo JAR é implementado quando você instala e configura o Shiohara CMS. 
+
+=== 2.4.2. viglet-shiohara.conf
+O arquivo viglet-shiohara.conf especifica configurações do Shiohara CMS, podendo especificar variáveis e ajustes da JVM. O Shiohara CMS é baseado no Spring Boot 2, portanto todas as configurações presentes esta solução são validas. Mais informações em: Customizing a Script When It Runs (https://docs.spring.io/spring-boot/docs/current/reference/html/deployment.html#deployment-script-customization-when-it-runs)
+
+
+= Capítulo 3. Criando Page Layouts
+[partintro]
+--
+Neste capítulo descreve os tipos de Page Layout e explica com um template é construído. Incluem os seguintes tópicos:
+
+* <<3.1. Javascript>>
+* <<3.2. Desenvolvendo Regiões>>
+* <<2.3. Tabela de Deploy>>
+* <<2.4. Explicação do Diagrama e da Tabela>>
+--
+
+== 3.1. Javascript
+O Javascript é permitido ser utilizada em Page Layout e Region. Provendo as seguintes funcionalidades.
+
+* **Suporta bibliotecas Javascript** - Usato para incluir qualquer arquivo de Javascript personalizado  para usar no código Javascript.
+* **Código Javascript** - Usado no server-side, ou seja para ser processado pelo servidor, que irá no final retornar uma renderização para a view. No código voc&e pode consturir um objeto Javascript e usar o código do HTML para gerar a renderização.
+* **Código HTML** - Usado para separar a renderização, que pode ser usado no campo do Código Javascript para gerar a renderização para a view.
+
+As views de Javascripts precisam ser escritas em Javascript usando a bibliotecas Javascript do Viglet Shiohara, pode ser utilizado especificando o **shObject** em seu código. Mais informaçõesm no Javascript API (https://shioharacms.github.io/shiohara/javascript/) 
+
+== 3.2. Desenvolvendo Regiões
+Shiohara CMS prove um número pré-configurado de componentes( como Navigation Component, Query Component) que simplifica a construção de uma página web.
+Cada região pode chamar um ou mais componentes.
+
+O resultado final da região é cacheada, ao menos que time-to-live (TTL) esteja configurado para zero (0).
+
+=== 3.2.1 Para que um Região é usada
+Regiões são essencialmente um fragmento de renderização. O desenvolvedor web associa a região ao um Page Layout ou outra Região para criar o resultado final pretendido.
+
+=== 3.2.3 Utilizando URL de Imagens e Conteúdos
+Quando está escrevendo uma região, se o componente contem um atributo com link ou media, as informações armazenadas são apenas IDs que precisam ser convertidos para URLs.
+Pode ser utilizado usando os seguintes métodos do shObject:
+
+* generateFolderLink(id) - Gera link de uma Pasta
+* generatePostLink(id) - Gera link de Post ou Arquivo
+* generateObjectLink(id) - Gera link de qualquer objeto, podendo ser Pasta, Post ou Arquivo
+
 
 [glossary]
 = Glossário
