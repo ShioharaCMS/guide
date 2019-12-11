@@ -1,10 +1,15 @@
 = Viglet Shiohara CMS: Guia do Desenvolvedor
 Viglet Team <opensource@viglet.com>
+:organization: Viglet Shiohara CMS
 :toc: left
 :toc-title: Tabela de Conteúdo
 :doctype: book
 :revnumber: 0.3.6 
 :revdate: 25-11-2019
+:title-logo-image: image:assets/shiohara-logo.png[pdfwidth=4.25in,align=center]
+:pdf-theme: viglet
+:pdf-themesdir: {docdir}
+:source-highlighter: rouge
 
 [preface]
 = Prefácio
