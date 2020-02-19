@@ -3,7 +3,7 @@ title_page:
   align: center
   #background_color: transparent
   background_image: image:assets/viglet-cover.png[]
-  font_color: #ffdead
+  font_color: #ffffff
   #font_family: Free Sans
   #font_size: $heading_h1_font_size
   #font_style:       # <(inherit)> | normal | italic | bold | bold_italic
