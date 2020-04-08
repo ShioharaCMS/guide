@@ -1,6 +1,0 @@
-#!/bin/bash
-asciidoctor index.htmladoc
-
-asciidoctor getting-started.adoc
-asciidoctor shiohara-developer-guide.adoc
-asciidoctor-pdf shiohara-developer-guide.adoc

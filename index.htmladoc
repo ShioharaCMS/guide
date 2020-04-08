@@ -1,5 +1,5 @@
-[[shiohara-cms-reference-documentation]]
-= Shiohara CMS Reference Documentation
+[[shio-cms-reference-documentation]]
+= Shio CMS Reference Documentation
 Alexandre Oliveira
 :docinfo: shared
 
@@ -7,5 +7,5 @@ The reference documentation consists of the following sections:
 
 [horizontal]
 
-<<getting-started.adoc#,Getting Started>> :: Introducing Shiohara CMS, System Requirements
-<<shiohara-developer-guide.adoc#,Installation Guide>> :: About the Documentation, Getting Help, First Steps, and more.
+<<getting-started.adoc#,Getting Started>> :: Introducing Shio CMS, System Requirements
+<<shio-developer-guide.adoc#,Installation Guide>> :: About the Documentation, Getting Help, First Steps, and more.

@@ -1,4 +1,4 @@
-= Viglet Shiohara CMS: Guia do Desenvolvedor
+= Viglet Shio CMS: Guia do Desenvolvedor
 Viglet Team <opensource@viglet.com>
 :toc: left
 :toc-title: Tabela de Conteúdo
@@ -21,34 +21,34 @@ Alexandre Oliveira adora desenvolvimento de aplicações corporativas.
 [dedication]
 = Dedicatória
 
-Este livro é dedicado ao Enrico Shiohara, que ensinou tudo que sei sobre CMS.
+Este livro é dedicado ao Enrico Shio, que ensinou tudo que sei sobre CMS.
 
 :numbered:
 == Introdução
-Neste capítulo provém conceitos e outras informações requeridas para realizar tarefas de desenvolvimento do Shiohara CMS
+Neste capítulo provém conceitos e outras informações requeridas para realizar tarefas de desenvolvimento do Shio CMS
 
 Incluem os seguintes tópicos:
 
-* <<Sobre o Shiohara CMS>>
+* <<Sobre o Shio CMS>>
 * <<O que será coberto neste livro>>
 * <<Documentações necessárias>>
 
-=== Sobre o Shiohara CMS
+=== Sobre o Shio CMS
 
-O Viglet Shiohara CMS permite administradores e contribuidores usarem uma interface gráfica para definir como o conteúdo é apresentado nos web sites. A área de **Temas** é onde são gerenciados os objetos de apresentação. O **View Page** mostra a página completamente renderizada.
+O Viglet Shio CMS permite administradores e contribuidores usarem uma interface gráfica para definir como o conteúdo é apresentado nos web sites. A área de **Temas** é onde são gerenciados os objetos de apresentação. O **View Page** mostra a página completamente renderizada.
 
 Existem 2 tipos de visualização do site: **Management** e **Publicado**, onde:
 
 * **Management**: Contém todos os conteúdos do site, tanto publicados quanto despublicados e rascunhos
 * **Publicado**: Site que exibe apenas conteúdos publicados. É necessário publicar os conteúdos para que sejam exibidos.
 
-O Shiohara CMS tem Page Layouts e Regions de exemplo, que podem ser vistos quando é criado o site, e pode servir de ponto de partida para criar seu site. Além disto possui formas de desenvolver e personalizar de forma programática estes templates, em que iremos discutir neste documento.
+O Shio CMS tem Page Layouts e Regions de exemplo, que podem ser vistos quando é criado o site, e pode servir de ponto de partida para criar seu site. Além disto possui formas de desenvolver e personalizar de forma programática estes templates, em que iremos discutir neste documento.
 
 ==== Page Layouts e Regions
 
 Um Page Layout é um bloco básico de construção para criar e gerenciar paginas usando padões repetidos. Cada página gerada é associada com exatamente um Page Layout, que controla o layout, tema e regiões na página.
 
-O objetivo básico da apresentação é exibir pastas e conteúdos do repositório do Shiohara CMS como páginas web. Neste ponto é preciso associar pastas e conteúdos a Page Layouts.
+O objetivo básico da apresentação é exibir pastas e conteúdos do repositório do Shio CMS como páginas web. Neste ponto é preciso associar pastas e conteúdos a Page Layouts.
 
 Um único template pode ser aplicado para várias pastas e conteúdos, que facilita muito o processo de desenvolvimento e gerenciamento do site e permite uma aparência e características consistentes.
 
@@ -62,7 +62,7 @@ image::assets/page-layout-4-regions.png[width="50%" height="50%"]
 
 ==== API para Componentes
 
-Em Page Layots e Regiões podem ter API para Componentes, que são responsávels poder renderizar tipos diferentes de fontes de conteúdos do repositório do Shiohara CMS. Por exemplo, um **Query Component** pode ser usado para filtar uma lista de conteúdos de uma pasta, enquanto um **Navigation Component** pode renderizar as pastas como menus em seu site.
+Em Page Layots e Regiões podem ter API para Componentes, que são responsávels poder renderizar tipos diferentes de fontes de conteúdos do repositório do Shio CMS. Por exemplo, um **Query Component** pode ser usado para filtar uma lista de conteúdos de uma pasta, enquanto um **Navigation Component** pode renderizar as pastas como menus em seu site.
 
 [#page-layout-components]
 .Page Layout com API de Componentes em suas regiões.
@@ -80,7 +80,7 @@ NOTE: The header is optional.
 
 === O que será coberto neste livro
 
-Na tabela abaixo, resume os tópico que serão cobertos neste documento e como eles são aplicados no desenvolvimento do Shiohara CMS.
+Na tabela abaixo, resume os tópico que serão cobertos neste documento e como eles são aplicados no desenvolvimento do Shio CMS.
 .Tópicos neste Livro
 |===
 |Tópico |Veja...
@@ -102,15 +102,15 @@ Na tabela abaixo, resume os tópico que serão cobertos neste documento e como e
 
 "Ativando Renderização de AJAX JSP", na página 139
 
-| Entendendo a tag library do Shiohara CMS
-| "Personalizando o Shiohara CMS" na página 73
+| Entendendo a tag library do Shio CMS
+| "Personalizando o Shio CMS" na página 73
 
-"Usando a Tag Library do Shiohara CMS" na página 75
+"Usando a Tag Library do Shio CMS" na página 75
 
 | Opcional. Desenvolva grids e estilos personalizados
-| "Personalizando o Shiohara CMS" na página 73
+| "Personalizando o Shio CMS" na página 73
 
- "Usando a Tag Library do Shiohara CMS" na página 75
+ "Usando a Tag Library do Shio CMS" na página 75
 
  "Criando um Grid Personalizado" na página 77
 
@@ -124,17 +124,17 @@ Na tabela abaixo, resume os tópico que serão cobertos neste documento e como e
 | "Tipo de Componente de Conteúdo" página 91
 
 | Consulte o Javadoc para tópicos não cobertos neste livro (como usando cache e desenvolvimento modificadores de request)
-| Shiohara CMS <version> Public API Javadocs
+| Shio CMS <version> Public API Javadocs
 
 | Construa e deploye suas aplicação
 | "Construindo e Deployando Aplicações/Extensões" página 131
 |===
 
 === Documentações necessárias
-Para outras documentações sobre o Shiohara CMS, incluindo Javadoc, Javascript API, vá em Getting Started (https://shiohara.readme.io/docs).
+Para outras documentações sobre o Shio CMS, incluindo Javadoc, Javascript API, vá em Getting Started (https://shio.readme.io/docs).
 
 == Arquitetura de Implementação
-Neste capítulo descreve e ilustra aplicações, componentes e arquivos que são implementados com o Shiohara CMS incluindo os seguintes tópicos:
+Neste capítulo descreve e ilustra aplicações, componentes e arquivos que são implementados com o Shio CMS incluindo os seguintes tópicos:
 
 * <<Visão Geral>>
 * <<Diagrama de Implementação>>
@@ -143,12 +143,12 @@ Neste capítulo descreve e ilustra aplicações, componentes e arquivos que são
 
 === Visão Geral
 
-Para personalizar o Shiohara CMS, você deve implementar Java Archive (JAR) nas seguintes localizações:
+Para personalizar o Shio CMS, você deve implementar Java Archive (JAR) nas seguintes localizações:
 
 === Diagrama de Implementação
 
 [#deployment-diagram]
-.Mostra a implementação de arquitetura do Shiohara CMS em detalhes e subsequente sessões discutidas nesta arquitetura.
+.Mostra a implementação de arquitetura do Shio CMS em detalhes e subsequente sessões discutidas nesta arquitetura.
 image::assets/deployment-diagram.png[width="50%" height="50%"]
 
 === Tabela de Deploy
@@ -156,21 +156,21 @@ image::assets/deployment-diagram.png[width="50%" height="50%"]
 |Diretório |Arquivo implementado |Quem provê
 
 |<SHIOHARA_DIR>/
-|viglet-shiohara.jar
-|Shiohara
+|viglet-shio.jar
+|Shio
 
 |<SHIOHARA_DIR>/
-|viglet-shiohara.conf
+|viglet-shio.conf
 |Você
 |===
 
 === Explicação do Diagrama e da Tabela
 
-==== viglet.shiohara.jar
-Este arquivo JAR é implementado quando você instala e configura o Shiohara CMS. 
+==== viglet.shio.jar
+Este arquivo JAR é implementado quando você instala e configura o Shio CMS. 
 
-==== viglet-shiohara.conf
-O arquivo viglet-shiohara.conf especifica configurações do Shiohara CMS, podendo especificar variáveis e ajustes da JVM. O Shiohara CMS é baseado no Spring Boot 2, portanto todas as configurações presentes esta solução são validas. Mais informações em: https://docs.spring.io/spring-boot/docs/current/reference/html/deployment.html#deployment-script-customization-when-it-runs[Customizing a Script When It Runs, window="_blank"]
+==== viglet-shio.conf
+O arquivo viglet-shio.conf especifica configurações do Shio CMS, podendo especificar variáveis e ajustes da JVM. O Shio CMS é baseado no Spring Boot 2, portanto todas as configurações presentes esta solução são validas. Mais informações em: https://docs.spring.io/spring-boot/docs/current/reference/html/deployment.html#deployment-script-customization-when-it-runs[Customizing a Script When It Runs, window="_blank"]
 
 
 == Criando Page Layouts
@@ -186,10 +186,10 @@ O Javascript é permitido ser utilizada em Page Layout e Region. Provendo as seg
 * **Código Javascript** - Usado no server-side, ou seja para ser processado pelo servidor, que irá no final retornar uma renderização para a view. No código voc&e pode consturir um objeto Javascript e usar o código do HTML para gerar a renderização.
 * **Código HTML** - Usado para separar a renderização, que pode ser usado no campo do Código Javascript para gerar a renderização para a view.
 
-As views de Javascripts precisam ser escritas em Javascript usando a bibliotecas Javascript do Viglet Shiohara, pode ser utilizado especificando o **shObject** em seu código. Mais informaçõesm no Javascript API (https://shioharacms.github.io/shiohara/javascript/) 
+As views de Javascripts precisam ser escritas em Javascript usando a bibliotecas Javascript do Viglet Shio, pode ser utilizado especificando o **shObject** em seu código. Mais informaçõesm no Javascript API (https://shiocms.github.io/shio/javascript/) 
 
 === Desenvolvendo Regiões
-Shiohara CMS prove um número pré-configurado de componentes( como Navigation Component, Query Component) que simplifica a construção de uma página web.
+Shio CMS prove um número pré-configurado de componentes( como Navigation Component, Query Component) que simplifica a construção de uma página web.
 Cada região pode chamar um ou mais componentes.
 
 O resultado final da região é cacheada, ao menos que time-to-live (TTL) esteja configurado para zero (0).

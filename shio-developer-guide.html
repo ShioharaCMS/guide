@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
 <meta name="author" content="Viglet Team">
-<title>Viglet Shiohara CMS: Guia do Desenvolvedor</title>
+<title>Viglet Shio CMS: Guia do Desenvolvedor</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -439,7 +439,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="book toc2 toc-left">
 <div id="header">
-<h1>Viglet Shiohara CMS: Guia do Desenvolvedor</h1>
+<h1>Viglet Shio CMS: Guia do Desenvolvedor</h1>
 <div class="details">
 <span id="author" class="author">Viglet Team</span><br>
 <span id="email" class="email"><a href="mailto:opensource@viglet.com">opensource@viglet.com</a></span><br>
@@ -454,7 +454,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_dedicatória">Dedicatória</a></li>
 <li><a href="#_introdução">1. Introdução</a>
 <ul class="sectlevel2">
-<li><a href="#_sobre_o_shiohara_cms">1.1. Sobre o Shiohara CMS</a></li>
+<li><a href="#_sobre_o_shio_cms">1.1. Sobre o Shio CMS</a></li>
 <li><a href="#_o_que_será_coberto_neste_livro">1.2. O que será coberto neste livro</a></li>
 <li><a href="#_documentações_necessárias">1.3. Documentações necessárias</a></li>
 </ul>
@@ -502,7 +502,7 @@ She had conquered the mountain of government reports that, over the course of si
 <h2 id="_dedicatória">Dedicatória</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Este livro é dedicado ao Enrico Shiohara, que ensinou tudo que sei sobre CMS.</p>
+<p>Este livro é dedicado ao Enrico Shio, que ensinou tudo que sei sobre CMS.</p>
 </div>
 </div>
 </div>
@@ -510,7 +510,7 @@ She had conquered the mountain of government reports that, over the course of si
 <h2 id="_introdução">1. Introdução</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Neste capítulo provém conceitos e outras informações requeridas para realizar tarefas de desenvolvimento do Shiohara CMS</p>
+<p>Neste capítulo provém conceitos e outras informações requeridas para realizar tarefas de desenvolvimento do Shio CMS</p>
 </div>
 <div class="paragraph">
 <p>Incluem os seguintes tópicos:</p>
@@ -518,7 +518,7 @@ She had conquered the mountain of government reports that, over the course of si
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#_sobre_o_shiohara_cms">Sobre o Shiohara CMS</a></p>
+<p><a href="#_sobre_o_shio_cms">Sobre o Shio CMS</a></p>
 </li>
 <li>
 <p><a href="#_o_que_será_coberto_neste_livro">O que será coberto neste livro</a></p>
@@ -529,9 +529,9 @@ She had conquered the mountain of government reports that, over the course of si
 </ul>
 </div>
 <div class="sect2">
-<h3 id="_sobre_o_shiohara_cms">1.1. Sobre o Shiohara CMS</h3>
+<h3 id="_sobre_o_shio_cms">1.1. Sobre o Shio CMS</h3>
 <div class="paragraph">
-<p>O Viglet Shiohara CMS permite administradores e contribuidores usarem uma interface gráfica para definir como o conteúdo é apresentado nos web sites. A área de <strong>Temas</strong> é onde são gerenciados os objetos de apresentação. O <strong>View Page</strong> mostra a página completamente renderizada.</p>
+<p>O Viglet Shio CMS permite administradores e contribuidores usarem uma interface gráfica para definir como o conteúdo é apresentado nos web sites. A área de <strong>Temas</strong> é onde são gerenciados os objetos de apresentação. O <strong>View Page</strong> mostra a página completamente renderizada.</p>
 </div>
 <div class="paragraph">
 <p>Existem 2 tipos de visualização do site: <strong>Management</strong> e <strong>Publicado</strong>, onde:</p>
@@ -547,7 +547,7 @@ She had conquered the mountain of government reports that, over the course of si
 </ul>
 </div>
 <div class="paragraph">
-<p>O Shiohara CMS tem Page Layouts e Regions de exemplo, que podem ser vistos quando é criado o site, e pode servir de ponto de partida para criar seu site. Além disto possui formas de desenvolver e personalizar de forma programática estes templates, em que iremos discutir neste documento.</p>
+<p>O Shio CMS tem Page Layouts e Regions de exemplo, que podem ser vistos quando é criado o site, e pode servir de ponto de partida para criar seu site. Além disto possui formas de desenvolver e personalizar de forma programática estes templates, em que iremos discutir neste documento.</p>
 </div>
 <div class="sect3">
 <h4 id="_page_layouts_e_regions">1.1.1. Page Layouts e Regions</h4>
@@ -555,7 +555,7 @@ She had conquered the mountain of government reports that, over the course of si
 <p>Um Page Layout é um bloco básico de construção para criar e gerenciar paginas usando padões repetidos. Cada página gerada é associada com exatamente um Page Layout, que controla o layout, tema e regiões na página.</p>
 </div>
 <div class="paragraph">
-<p>O objetivo básico da apresentação é exibir pastas e conteúdos do repositório do Shiohara CMS como páginas web. Neste ponto é preciso associar pastas e conteúdos a Page Layouts.</p>
+<p>O objetivo básico da apresentação é exibir pastas e conteúdos do repositório do Shio CMS como páginas web. Neste ponto é preciso associar pastas e conteúdos a Page Layouts.</p>
 </div>
 <div class="paragraph">
 <p>Um único template pode ser aplicado para várias pastas e conteúdos, que facilita muito o processo de desenvolvimento e gerenciamento do site e permite uma aparência e características consistentes.</p>
@@ -576,7 +576,7 @@ She had conquered the mountain of government reports that, over the course of si
 <div class="sect3">
 <h4 id="_api_para_componentes">1.1.2. API para Componentes</h4>
 <div class="paragraph">
-<p>Em Page Layots e Regiões podem ter API para Componentes, que são responsávels poder renderizar tipos diferentes de fontes de conteúdos do repositório do Shiohara CMS. Por exemplo, um <strong>Query Component</strong> pode ser usado para filtar uma lista de conteúdos de uma pasta, enquanto um <strong>Navigation Component</strong> pode renderizar as pastas como menus em seu site.</p>
+<p>Em Page Layots e Regiões podem ter API para Componentes, que são responsávels poder renderizar tipos diferentes de fontes de conteúdos do repositório do Shio CMS. Por exemplo, um <strong>Query Component</strong> pode ser usado para filtar uma lista de conteúdos de uma pasta, enquanto um <strong>Navigation Component</strong> pode renderizar as pastas como menus em seu site.</p>
 </div>
 <div id="page-layout-components" class="imageblock">
 <div class="content">
@@ -625,7 +625,7 @@ The header is optional.
 <div class="sect2">
 <h3 id="_o_que_será_coberto_neste_livro">1.2. O que será coberto neste livro</h3>
 <div class="paragraph">
-<p>Na tabela abaixo, resume os tópico que serão cobertos neste documento e como eles são aplicados no desenvolvimento do Shiohara CMS.
+<p>Na tabela abaixo, resume os tópico que serão cobertos neste documento e como eles são aplicados no desenvolvimento do Shio CMS.
 .Tópicos neste Livro</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -657,14 +657,14 @@ The header is optional.
 <p class="tableblock">"Ativando Renderização de AJAX JSP", na página 139</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Entendendo a tag library do Shiohara CMS</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">"Personalizando o Shiohara CMS" na página 73</p>
-<p class="tableblock">"Usando a Tag Library do Shiohara CMS" na página 75</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Entendendo a tag library do Shio CMS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"Personalizando o Shio CMS" na página 73</p>
+<p class="tableblock">"Usando a Tag Library do Shio CMS" na página 75</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Opcional. Desenvolva grids e estilos personalizados</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">"Personalizando o Shiohara CMS" na página 73</p>
-<p class="tableblock"> "Usando a Tag Library do Shiohara CMS" na página 75</p>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"Personalizando o Shio CMS" na página 73</p>
+<p class="tableblock"> "Usando a Tag Library do Shio CMS" na página 75</p>
 <p class="tableblock"> "Criando um Grid Personalizado" na página 77</p>
 <p class="tableblock"> "Criando Estilos e Tipos de Estilos" na página 79</p>
 <p class="tableblock">"Exemplos de Grid e Estilo personalizado" na página 79</p>
@@ -676,7 +676,7 @@ The header is optional.
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Consulte o Javadoc para tópicos não cobertos neste livro (como usando cache e desenvolvimento modificadores de request)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Shiohara CMS &lt;version&gt; Public API Javadocs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shio CMS &lt;version&gt; Public API Javadocs</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Construa e deploye suas aplicação</p></td>
@@ -688,7 +688,7 @@ The header is optional.
 <div class="sect2">
 <h3 id="_documentações_necessárias">1.3. Documentações necessárias</h3>
 <div class="paragraph">
-<p>Para outras documentações sobre o Shiohara CMS, incluindo Javadoc, Javascript API, vá em Getting Started (<a href="https://shiohara.readme.io/docs" class="bare">https://shiohara.readme.io/docs</a>).</p>
+<p>Para outras documentações sobre o Shio CMS, incluindo Javadoc, Javascript API, vá em Getting Started (<a href="https://shio.readme.io/docs" class="bare">https://shio.readme.io/docs</a>).</p>
 </div>
 </div>
 </div>
@@ -697,7 +697,7 @@ The header is optional.
 <h2 id="_arquitetura_de_implementação">2. Arquitetura de Implementação</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Neste capítulo descreve e ilustra aplicações, componentes e arquivos que são implementados com o Shiohara CMS incluindo os seguintes tópicos:</p>
+<p>Neste capítulo descreve e ilustra aplicações, componentes e arquivos que são implementados com o Shio CMS incluindo os seguintes tópicos:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -718,7 +718,7 @@ The header is optional.
 <div class="sect2">
 <h3 id="_visão_geral">2.1. Visão Geral</h3>
 <div class="paragraph">
-<p>Para personalizar o Shiohara CMS, você deve implementar Java Archive (JAR) nas seguintes localizações:</p>
+<p>Para personalizar o Shio CMS, você deve implementar Java Archive (JAR) nas seguintes localizações:</p>
 </div>
 </div>
 <div class="sect2">
@@ -727,7 +727,7 @@ The header is optional.
 <div class="content">
 <img src="assets/deployment-diagram.png" alt="deployment diagram" width="50%" height="50%">
 </div>
-<div class="title">Figure 3. Mostra a implementação de arquitetura do Shiohara CMS em detalhes e subsequente sessões discutidas nesta arquitetura.</div>
+<div class="title">Figure 3. Mostra a implementação de arquitetura do Shio CMS em detalhes e subsequente sessões discutidas nesta arquitetura.</div>
 </div>
 </div>
 <div class="sect2">
@@ -748,12 +748,12 @@ The header is optional.
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">&lt;SHIOHARA_DIR&gt;/</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">viglet-shiohara.jar</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Shiohara</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">viglet-shio.jar</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shio</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">&lt;SHIOHARA_DIR&gt;/</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">viglet-shiohara.conf</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">viglet-shio.conf</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Você</p></td>
 </tr>
 </tbody>
@@ -762,15 +762,15 @@ The header is optional.
 <div class="sect2">
 <h3 id="_explicação_do_diagrama_e_da_tabela">2.4. Explicação do Diagrama e da Tabela</h3>
 <div class="sect3">
-<h4 id="_viglet_shiohara_jar">2.4.1. viglet.shiohara.jar</h4>
+<h4 id="_viglet_shio_jar">2.4.1. viglet.shio.jar</h4>
 <div class="paragraph">
-<p>Este arquivo JAR é implementado quando você instala e configura o Shiohara CMS.</p>
+<p>Este arquivo JAR é implementado quando você instala e configura o Shio CMS.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_viglet_shiohara_conf">2.4.2. viglet-shiohara.conf</h4>
+<h4 id="_viglet_shio_conf">2.4.2. viglet-shio.conf</h4>
 <div class="paragraph">
-<p>O arquivo viglet-shiohara.conf especifica configurações do Shiohara CMS, podendo especificar variáveis e ajustes da JVM. O Shiohara CMS é baseado no Spring Boot 2, portanto todas as configurações presentes esta solução são validas. Mais informações em: <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/deployment.html#deployment-script-customization-when-it-runs" target="_blank" rel="noopener">Customizing a Script When It Runs</a></p>
+<p>O arquivo viglet-shio.conf especifica configurações do Shio CMS, podendo especificar variáveis e ajustes da JVM. O Shio CMS é baseado no Spring Boot 2, portanto todas as configurações presentes esta solução são validas. Mais informações em: <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/deployment.html#deployment-script-customization-when-it-runs" target="_blank" rel="noopener">Customizing a Script When It Runs</a></p>
 </div>
 </div>
 </div>
@@ -811,13 +811,13 @@ The header is optional.
 </ul>
 </div>
 <div class="paragraph">
-<p>As views de Javascripts precisam ser escritas em Javascript usando a bibliotecas Javascript do Viglet Shiohara, pode ser utilizado especificando o <strong>shObject</strong> em seu código. Mais informaçõesm no Javascript API (<a href="https://shioharacms.github.io/shiohara/javascript/" class="bare">https://shioharacms.github.io/shiohara/javascript/</a>)</p>
+<p>As views de Javascripts precisam ser escritas em Javascript usando a bibliotecas Javascript do Viglet Shio, pode ser utilizado especificando o <strong>shObject</strong> em seu código. Mais informaçõesm no Javascript API (<a href="https://shiocms.github.io/shio/javascript/" class="bare">https://shiocms.github.io/shio/javascript/</a>)</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_desenvolvendo_regiões">3.2. Desenvolvendo Regiões</h3>
 <div class="paragraph">
-<p>Shiohara CMS prove um número pré-configurado de componentes( como Navigation Component, Query Component) que simplifica a construção de uma página web.
+<p>Shio CMS prove um número pré-configurado de componentes( como Navigation Component, Query Component) que simplifica a construção de uma página web.
 Cada região pode chamar um ou mais componentes.</p>
 </div>
 <div class="paragraph">
@@ -869,7 +869,7 @@ Pode ser utilizado usando os seguintes métodos do shObject:</p>
 <div id="footer">
 <div id="footer-text">
 Version 0.3.6<br>
-Last updated 2019-11-26 10:14:47 -0300
+Last updated 2020-04-08 14:39:27 -0300
 </div>
 </div>
 </body>
