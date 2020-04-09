@@ -21,7 +21,7 @@ Alexandre Oliveira adora desenvolvimento de aplicações corporativas.
 [dedication]
 = Dedicatória
 
-Este livro é dedicado ao Enrico Shio, que ensinou tudo que sei sobre CMS.
+Este livro é dedicado ao Enrico Shiohara, que ensinou tudo que sei sobre CMS.
 
 :numbered:
 == Introdução
@@ -172,7 +172,8 @@ Este arquivo JAR é implementado quando você instala e configura o Shio CMS.
 ==== viglet-shio.conf
 O arquivo viglet-shio.conf especifica configurações do Shio CMS, podendo especificar variáveis e ajustes da JVM. O Shio CMS é baseado no Spring Boot 2, portanto todas as configurações presentes esta solução são validas. Mais informações em: https://docs.spring.io/spring-boot/docs/current/reference/html/deployment.html#deployment-script-customization-when-it-runs[Customizing a Script When It Runs, window="_blank"]
 
-== Funcionalidades
+== Features
+
 
 === General
 
@@ -187,6 +188,29 @@ Entire development use directly themes using Javascript language. No deploy, jus
 
 ====  Microservices
 Run Multi-container Docker applications using Docker Compose, integrating with Nginx, MariaDB and MongoDB.
+
+=== Databases
+Supports all databases supported of Spring Framework as:
+
+* H2
+* MySQL
+* Oracle
+
+=== On Install
+* Import the Sample Site using sample-site repository
+* Create a Stock Site using stock-site-import repository
+* Import the Post Types
+* Create admin user using the password: admin
+
+=== Version Control
+* Use the Github to create a version of object.
+
+=== Publishing
+
+* When is created a post, its status will be **Draft**.
+* If the post was saved and it was published, it will appear on Site and its status will be **Published**.
+* If the post is published, but the post was changed, its status will be **Stale**.
+* If the post is unpublished will disappear on Site and its status will be **Unpublished**.
 
 === Modeling
 Create new Post Types with different attributes, that fit your business.

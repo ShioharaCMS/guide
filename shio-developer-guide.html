@@ -467,16 +467,20 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_explicação_do_diagrama_e_da_tabela">2.4. Explicação do Diagrama e da Tabela</a></li>
 </ul>
 </li>
-<li><a href="#_funcionalidades">3. Funcionalidades</a>
+<li><a href="#_features">3. Features</a>
 <ul class="sectlevel2">
 <li><a href="#_general">3.1. General</a></li>
-<li><a href="#_modeling">3.2. Modeling</a></li>
-<li><a href="#_configuration_console">3.3. Configuration Console</a></li>
-<li><a href="#_users">3.4. Users</a></li>
-<li><a href="#_groups">3.5. Groups</a></li>
-<li><a href="#_administration">3.6. Administration</a></li>
-<li><a href="#_post_types">3.7. Post Types</a></li>
-<li><a href="#_field_types">3.8. Field Types</a></li>
+<li><a href="#_databases">3.2. Databases</a></li>
+<li><a href="#_on_install">3.3. On Install</a></li>
+<li><a href="#_version_control">3.4. Version Control</a></li>
+<li><a href="#_publishing">3.5. Publishing</a></li>
+<li><a href="#_modeling">3.6. Modeling</a></li>
+<li><a href="#_configuration_console">3.7. Configuration Console</a></li>
+<li><a href="#_users">3.8. Users</a></li>
+<li><a href="#_groups">3.9. Groups</a></li>
+<li><a href="#_administration">3.10. Administration</a></li>
+<li><a href="#_post_types">3.11. Post Types</a></li>
+<li><a href="#_field_types">3.12. Field Types</a></li>
 </ul>
 </li>
 <li><a href="#_criando_page_layouts">4. Criando Page Layouts</a>
@@ -514,7 +518,7 @@ She had conquered the mountain of government reports that, over the course of si
 <h2 id="_dedicatória">Dedicatória</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Este livro é dedicado ao Enrico Shio, que ensinou tudo que sei sobre CMS.</p>
+<p>Este livro é dedicado ao Enrico Shiohara, que ensinou tudo que sei sobre CMS.</p>
 </div>
 </div>
 </div>
@@ -789,7 +793,7 @@ The header is optional.
 </div>
 </div>
 <div class="sect1">
-<h2 id="_funcionalidades">3. Funcionalidades</h2>
+<h2 id="_features">3. Features</h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_general">3.1. General</h3>
@@ -819,12 +823,79 @@ The header is optional.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_modeling">3.2. Modeling</h3>
+<h3 id="_databases">3.2. Databases</h3>
+<div class="paragraph">
+<p>Supports all databases supported of Spring Framework as:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>H2</p>
+</li>
+<li>
+<p>MySQL</p>
+</li>
+<li>
+<p>Oracle</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_on_install">3.3. On Install</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Import the Sample Site using sample-site repository</p>
+</li>
+<li>
+<p>Create a Stock Site using stock-site-import repository</p>
+</li>
+<li>
+<p>Import the Post Types</p>
+</li>
+<li>
+<p>Create admin user using the password: admin</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_version_control">3.4. Version Control</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Use the Github to create a version of object.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_publishing">3.5. Publishing</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>When is created a post, its status will be <strong>Draft</strong>.</p>
+</li>
+<li>
+<p>If the post was saved and it was published, it will appear on Site and its status will be <strong>Published</strong>.</p>
+</li>
+<li>
+<p>If the post is published, but the post was changed, its status will be <strong>Stale</strong>.</p>
+</li>
+<li>
+<p>If the post is unpublished will disappear on Site and its status will be <strong>Unpublished</strong>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_modeling">3.6. Modeling</h3>
 <div class="paragraph">
 <p>Create new Post Types with different attributes, that fit your business.</p>
 </div>
 <div class="sect3">
-<h4 id="_post_type">3.2.1. Post Type</h4>
+<h4 id="_post_type">3.6.1. Post Type</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -837,7 +908,7 @@ The header is optional.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_fields">3.2.2. Fields</h4>
+<h4 id="_fields">3.6.2. Fields</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -870,9 +941,9 @@ The header is optional.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_configuration_console">3.3. Configuration Console</h3>
+<h3 id="_configuration_console">3.7. Configuration Console</h3>
 <div class="sect3">
-<h4 id="_auth_providers">3.3.1. Auth Providers</h4>
+<h4 id="_auth_providers">3.7.1. Auth Providers</h4>
 <div class="paragraph">
 <p>Define how the can be the authentication of Console:</p>
 </div>
@@ -888,7 +959,7 @@ The header is optional.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_exchange_providers">3.3.2. Exchange Providers</h4>
+<h4 id="_exchange_providers">3.7.2. Exchange Providers</h4>
 <div class="paragraph">
 <p>Define the provider can be import content to Shio CMS. It is possible many instances of same provider.
 Supports the following Providers,</p>
@@ -907,33 +978,33 @@ Supports the following Providers,</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_search_providers">3.3.3. Search Providers</h4>
+<h4 id="_search_providers">3.7.3. Search Providers</h4>
 <div class="paragraph">
 <p>Define how the Search of Site will work.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_email">3.3.4. Email</h4>
+<h4 id="_email">3.7.4. Email</h4>
 <div class="paragraph">
 <p>Configure the Email Service to send email for Notification.</p>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_users">3.4. Users</h3>
+<h3 id="_users">3.8. Users</h3>
 <div class="paragraph">
 <p>Allow create, modify or delete a user that can access the console or protect page of site.
 Associate the user to Groups</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_groups">3.5. Groups</h3>
+<h3 id="_groups">3.9. Groups</h3>
 <div class="paragraph">
 <p>Allow create, modify or delete a groups and add user into groups</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_administration">3.6. Administration</h3>
+<h3 id="_administration">3.10. Administration</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -981,7 +1052,7 @@ Associate the user to Groups</p>
 </ul>
 </div>
 <div class="sect3">
-<h4 id="_permissions">3.6.1. Permissions</h4>
+<h4 id="_permissions">3.10.1. Permissions</h4>
 <div class="sect4">
 <h5 id="_console">Console</h5>
 <div class="paragraph">
@@ -996,13 +1067,13 @@ Associate the user to Groups</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_protected_page">3.6.2. Protected Page</h4>
+<h4 id="_protected_page">3.10.2. Protected Page</h4>
 <div class="paragraph">
 <p>Through Page Permission the Site allow Protected Page, with Users defined on Administration Page</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_properties_of_site">3.6.3. Properties of Site</h4>
+<h4 id="_properties_of_site">3.10.3. Properties of Site</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1027,7 +1098,7 @@ Associate the user to Groups</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_search">3.6.4. Search</h4>
+<h4 id="_search">3.10.4. Search</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1040,7 +1111,7 @@ Associate the user to Groups</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_order_the_list_of_objects_of_folder_per">3.6.5. Order the list of objects of folder per:</h4>
+<h4 id="_order_the_list_of_objects_of_folder_per">3.10.5. Order the list of objects of folder per:</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1056,7 +1127,7 @@ Associate the user to Groups</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_select_objects_of_folder_per">3.6.6. Select objects of folder per:</h4>
+<h4 id="_select_objects_of_folder_per">3.10.6. Select objects of folder per:</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1078,7 +1149,7 @@ Associate the user to Groups</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_popup_action_on_mouse_over_of_folder_as">3.6.7. Popup action on mouse over of Folder as:</h4>
+<h4 id="_popup_action_on_mouse_over_of_folder_as">3.10.7. Popup action on mouse over of Folder as:</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1106,7 +1177,7 @@ Associate the user to Groups</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_popup_action_on_mouse_over_of_post_as">3.6.8. Popup action on mouse over of Post as:</h4>
+<h4 id="_popup_action_on_mouse_over_of_post_as">3.10.8. Popup action on mouse over of Post as:</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1131,7 +1202,7 @@ Associate the user to Groups</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_select_multiple_objects_and_define_an_actions_as">3.6.9. Select multiple objects and define an actions as:</h4>
+<h4 id="_select_multiple_objects_and_define_an_actions_as">3.10.9. Select multiple objects and define an actions as:</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1148,118 +1219,118 @@ Associate the user to Groups</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_post_types">3.7. Post Types</h3>
+<h3 id="_post_types">3.11. Post Types</h3>
 <div class="paragraph">
 <p>System Post Types as:</p>
 </div>
 <div class="sect3">
-<h4 id="_text">3.7.1. Text</h4>
+<h4 id="_text">3.11.1. Text</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_photo">3.7.2. Photo</h4>
+<h4 id="_photo">3.11.2. Photo</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_video">3.7.3. Video</h4>
+<h4 id="_video">3.11.3. Video</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_quote">3.7.4. Quote</h4>
+<h4 id="_quote">3.11.4. Quote</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_link">3.7.5. Link</h4>
+<h4 id="_link">3.11.5. Link</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_file">3.7.6. File</h4>
+<h4 id="_file">3.11.6. File</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_region">3.7.7. Region</h4>
+<h4 id="_region">3.11.7. Region</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_theme">3.7.8. Theme</h4>
+<h4 id="_theme">3.11.8. Theme</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_page_layout">3.7.9. Page Layout</h4>
+<h4 id="_page_layout">3.11.9. Page Layout</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_alias">3.7.10. Alias</h4>
+<h4 id="_alias">3.11.10. Alias</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_folder_index">3.7.11. Folder Index</h4>
+<h4 id="_folder_index">3.11.11. Folder Index</h4>
 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_field_types">3.8. Field Types</h3>
+<h3 id="_field_types">3.12. Field Types</h3>
 <div class="paragraph">
 <p>Create complex custom Post Types using many Field Types:</p>
 </div>
 <div class="sect3">
-<h4 id="_hidden">3.8.1. Hidden</h4>
+<h4 id="_hidden">3.12.1. Hidden</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_text_2">3.8.2. Text</h4>
+<h4 id="_text_2">3.12.2. Text</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_text_area">3.8.3. Text Area</h4>
+<h4 id="_text_area">3.12.3. Text Area</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_ace_editor_html">3.8.4. Ace Editor - HTML</h4>
+<h4 id="_ace_editor_html">3.12.4. Ace Editor - HTML</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_ace_editor_javascript">3.8.5. Ace Editor - Javascript</h4>
+<h4 id="_ace_editor_javascript">3.12.5. Ace Editor - Javascript</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_html_editor">3.8.6. HTML Editor</h4>
+<h4 id="_html_editor">3.12.6. HTML Editor</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_content_select">3.8.7. Content Select</h4>
+<h4 id="_content_select">3.12.7. Content Select</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_relator">3.8.8. Relator</h4>
+<h4 id="_relator">3.12.8. Relator</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_combo_box">3.8.9. Combo Box</h4>
+<h4 id="_combo_box">3.12.9. Combo Box</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_recaptcha">3.8.10. Recaptcha</h4>
+<h4 id="_recaptcha">3.12.10. Recaptcha</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_form_configuration">3.8.11. Form Configuration</h4>
+<h4 id="_form_configuration">3.12.11. Form Configuration</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_date">3.8.12. Date</h4>
+<h4 id="_date">3.12.12. Date</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_multi_select">3.8.13. Multi Select</h4>
+<h4 id="_multi_select">3.12.13. Multi Select</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_tab">3.8.14. Tab</h4>
+<h4 id="_tab">3.12.14. Tab</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_check_box">3.8.15. Check Box</h4>
+<h4 id="_check_box">3.12.15. Check Box</h4>
 
 </div>
 </div>
@@ -1358,7 +1429,7 @@ Pode ser utilizado usando os seguintes métodos do shObject:</p>
 <div id="footer">
 <div id="footer-text">
 Version 0.3.6<br>
-Last updated 2020-04-08 22:06:51 -0300
+Last updated 2020-04-08 22:33:31 -0300
 </div>
 </div>
 </body>
