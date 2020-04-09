@@ -467,10 +467,22 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_explicação_do_diagrama_e_da_tabela">2.4. Explicação do Diagrama e da Tabela</a></li>
 </ul>
 </li>
-<li><a href="#_criando_page_layouts">3. Criando Page Layouts</a>
+<li><a href="#_funcionalidades">3. Funcionalidades</a>
 <ul class="sectlevel2">
-<li><a href="#_javascript">3.1. Javascript</a></li>
-<li><a href="#_desenvolvendo_regiões">3.2. Desenvolvendo Regiões</a></li>
+<li><a href="#_general">3.1. General</a></li>
+<li><a href="#_modeling">3.2. Modeling</a></li>
+<li><a href="#_configuration_console">3.3. Configuration Console</a></li>
+<li><a href="#_users">3.4. Users</a></li>
+<li><a href="#_groups">3.5. Groups</a></li>
+<li><a href="#_administration">3.6. Administration</a></li>
+<li><a href="#_post_types">3.7. Post Types</a></li>
+<li><a href="#_field_types">3.8. Field Types</a></li>
+</ul>
+</li>
+<li><a href="#_criando_page_layouts">4. Criando Page Layouts</a>
+<ul class="sectlevel2">
+<li><a href="#_javascript">4.1. Javascript</a></li>
+<li><a href="#_desenvolvendo_regiões">4.2. Desenvolvendo Regiões</a></li>
 </ul>
 </li>
 <li><a href="#_glossário">Glossário</a></li>
@@ -777,7 +789,484 @@ The header is optional.
 </div>
 </div>
 <div class="sect1">
-<h2 id="_criando_page_layouts">3. Criando Page Layouts</h2>
+<h2 id="_funcionalidades">3. Funcionalidades</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_general">3.1. General</h3>
+<div class="sect3">
+<h4 id="_search_ready">3.1.1. Search Ready</h4>
+<div class="paragraph">
+<p>Contents are indexed automatically. This way, you can use embedded search engine in your site. Simple and powerful.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_native_cache">3.1.2. Native Cache</h4>
+<div class="paragraph">
+<p>Your site will be optimized with native cache. Faster and hassle free.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_pure_javascript">3.1.3. Pure Javascript</h4>
+<div class="paragraph">
+<p>Entire development use directly themes using Javascript language. No deploy, just create and ready.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_microservices">3.1.4. Microservices</h4>
+<div class="paragraph">
+<p>Run Multi-container Docker applications using Docker Compose, integrating with Nginx, MariaDB and MongoDB.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_modeling">3.2. Modeling</h3>
+<div class="paragraph">
+<p>Create new Post Types with different attributes, that fit your business.</p>
+</div>
+<div class="sect3">
+<h4 id="_post_type">3.2.1. Post Type</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Define the Name, Description and Identifier for Post Type</p>
+</li>
+<li>
+<p>Define how will responsible for publishing, that will receive a email always that Post of Post Type is published.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_fields">3.2.2. Fields</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Order the Fields of Post Type</p>
+</li>
+<li>
+<p>Create a Text, Decription and Identifier for each Field</p>
+</li>
+<li>
+<p>Define if the Field is Tite and/or Description of Post Type.</p>
+</li>
+</ul>
+</div>
+<div class="sect4">
+<h5 id="_search_navigation">Search Navigation</h5>
+<div class="paragraph">
+<p>Define how the content will be index into Viglet Turing</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Search Field Association: Use default fields of Viglet Turing Semantic Navigation</p>
+</li>
+<li>
+<p>Create Addtional Search Field: Use a custom field of Viglet Turing Semantic Navigation, can choose the same name of field or other.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_configuration_console">3.3. Configuration Console</h3>
+<div class="sect3">
+<h4 id="_auth_providers">3.3.1. Auth Providers</h4>
+<div class="paragraph">
+<p>Define how the can be the authentication of Console:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Shio Native</p>
+</li>
+<li>
+<p>OpenText Directory Service</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_exchange_providers">3.3.2. Exchange Providers</h4>
+<div class="paragraph">
+<p>Define the provider can be import content to Shio CMS. It is possible many instances of same provider.
+Supports the following Providers,</p>
+</div>
+<div class="sect4">
+<h5 id="_otcs_opentext_content_services">OTCS - OpenText Content Services</h5>
+<div class="paragraph">
+<p>Import Documents from OTCS</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_otmm_opentext_media_management">OTMM - OpenText Media Management</h5>
+<div class="paragraph">
+<p>Import Files from OTMM</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_search_providers">3.3.3. Search Providers</h4>
+<div class="paragraph">
+<p>Define how the Search of Site will work.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_email">3.3.4. Email</h4>
+<div class="paragraph">
+<p>Configure the Email Service to send email for Notification.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_users">3.4. Users</h3>
+<div class="paragraph">
+<p>Allow create, modify or delete a user that can access the console or protect page of site.
+Associate the user to Groups</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_groups">3.5. Groups</h3>
+<div class="paragraph">
+<p>Allow create, modify or delete a groups and add user into groups</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_administration">3.6. Administration</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Reorder the posts into folder and show the results instantly into page of site.</p>
+</li>
+<li>
+<p>Generate spreadsheet of folder, where each sheet is a Post Type.</p>
+</li>
+<li>
+<p>Download the site</p>
+</li>
+<li>
+<p>Import Site</p>
+</li>
+<li>
+<p>Create Site with theme pre-defined</p>
+</li>
+<li>
+<p>Create worflow</p>
+</li>
+<li>
+<p>Create folders</p>
+</li>
+<li>
+<p>Create post types</p>
+</li>
+<li>
+<p>Create posts</p>
+</li>
+<li>
+<p>Upload multiple files into folder</p>
+</li>
+<li>
+<p>Change Folder View: List or Thumbnail</p>
+</li>
+<li>
+<p>Navigate between folders through breadcrumb</p>
+</li>
+<li>
+<p>Preview of Site using button "View Site"</p>
+</li>
+<li>
+<p>See all commits changes of site</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="_permissions">3.6.1. Permissions</h4>
+<div class="sect4">
+<h5 id="_console">Console</h5>
+<div class="paragraph">
+<p>Define Permission of Console, adding Groups and Users</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_page">Page</h5>
+<div class="paragraph">
+<p>Define Permission of Pages of Site, adding Groups and Users</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_protected_page">3.6.2. Protected Page</h4>
+<div class="paragraph">
+<p>Through Page Permission the Site allow Protected Page, with Users defined on Administration Page</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_properties_of_site">3.6.3. Properties of Site</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Name</p>
+</li>
+<li>
+<p>Description</p>
+</li>
+<li>
+<p>URL</p>
+</li>
+<li>
+<p>Define the Association between Post Type and Page Layout</p>
+</li>
+<li>
+<p>Define what content will be searchable</p>
+</li>
+<li>
+<p>Define which Folder will be save posts of Form when the result be success.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_search">3.6.4. Search</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Search global</p>
+</li>
+<li>
+<p>Search posts per folder</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_order_the_list_of_objects_of_folder_per">3.6.5. Order the list of objects of folder per:</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Name</p>
+</li>
+<li>
+<p>Description</p>
+</li>
+<li>
+<p>Date</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_select_objects_of_folder_per">3.6.6. Select objects of folder per:</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Content</p>
+</li>
+<li>
+<p>Folder</p>
+</li>
+<li>
+<p>Everything</p>
+</li>
+<li>
+<p>Invert Selection</p>
+</li>
+<li>
+<p>Nothing</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_popup_action_on_mouse_over_of_folder_as">3.6.7. Popup action on mouse over of Folder as:</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Edit</p>
+</li>
+<li>
+<p>Copy</p>
+</li>
+<li>
+<p>Move</p>
+</li>
+<li>
+<p>Clone</p>
+</li>
+<li>
+<p>Delete</p>
+</li>
+<li>
+<p>View Page</p>
+</li>
+<li>
+<p>Clear Cache</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_popup_action_on_mouse_over_of_post_as">3.6.8. Popup action on mouse over of Post as:</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Copy</p>
+</li>
+<li>
+<p>Move</p>
+</li>
+<li>
+<p>Clone</p>
+</li>
+<li>
+<p>Delete</p>
+</li>
+<li>
+<p>View Page</p>
+</li>
+<li>
+<p>Clear Cache</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_select_multiple_objects_and_define_an_actions_as">3.6.9. Select multiple objects and define an actions as:</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Copy</p>
+</li>
+<li>
+<p>Move</p>
+</li>
+<li>
+<p>Delete</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_post_types">3.7. Post Types</h3>
+<div class="paragraph">
+<p>System Post Types as:</p>
+</div>
+<div class="sect3">
+<h4 id="_text">3.7.1. Text</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_photo">3.7.2. Photo</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_video">3.7.3. Video</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_quote">3.7.4. Quote</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_link">3.7.5. Link</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_file">3.7.6. File</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_region">3.7.7. Region</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_theme">3.7.8. Theme</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_page_layout">3.7.9. Page Layout</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_alias">3.7.10. Alias</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_folder_index">3.7.11. Folder Index</h4>
+
+</div>
+</div>
+<div class="sect2">
+<h3 id="_field_types">3.8. Field Types</h3>
+<div class="paragraph">
+<p>Create complex custom Post Types using many Field Types:</p>
+</div>
+<div class="sect3">
+<h4 id="_hidden">3.8.1. Hidden</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_text_2">3.8.2. Text</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_text_area">3.8.3. Text Area</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_ace_editor_html">3.8.4. Ace Editor - HTML</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_ace_editor_javascript">3.8.5. Ace Editor - Javascript</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_html_editor">3.8.6. HTML Editor</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_content_select">3.8.7. Content Select</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_relator">3.8.8. Relator</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_combo_box">3.8.9. Combo Box</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_recaptcha">3.8.10. Recaptcha</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_form_configuration">3.8.11. Form Configuration</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_date">3.8.12. Date</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_multi_select">3.8.13. Multi Select</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_tab">3.8.14. Tab</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_check_box">3.8.15. Check Box</h4>
+
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_criando_page_layouts">4. Criando Page Layouts</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Neste capítulo descreve os tipos de Page Layout e explica com um template é construído. Incluem os seguintes tópicos:</p>
@@ -793,7 +1282,7 @@ The header is optional.
 </ul>
 </div>
 <div class="sect2">
-<h3 id="_javascript">3.1. Javascript</h3>
+<h3 id="_javascript">4.1. Javascript</h3>
 <div class="paragraph">
 <p>O Javascript é permitido ser utilizada em Page Layout e Region. Provendo as seguintes funcionalidades.</p>
 </div>
@@ -815,7 +1304,7 @@ The header is optional.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_desenvolvendo_regiões">3.2. Desenvolvendo Regiões</h3>
+<h3 id="_desenvolvendo_regiões">4.2. Desenvolvendo Regiões</h3>
 <div class="paragraph">
 <p>Shio CMS prove um número pré-configurado de componentes( como Navigation Component, Query Component) que simplifica a construção de uma página web.
 Cada região pode chamar um ou mais componentes.</p>
@@ -824,13 +1313,13 @@ Cada região pode chamar um ou mais componentes.</p>
 <p>O resultado final da região é cacheada, ao menos que time-to-live (TTL) esteja configurado para zero (0).</p>
 </div>
 <div class="sect3">
-<h4 id="_para_que_uma_região_é_utilizada">3.2.1. Para que uma Região é utilizada</h4>
+<h4 id="_para_que_uma_região_é_utilizada">4.2.1. Para que uma Região é utilizada</h4>
 <div class="paragraph">
 <p>Regiões são essencialmente um fragmento de renderização. O desenvolvedor web associa a região ao um Page Layout ou outra Região para criar o resultado final pretendido.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_utilizando_url_de_imagens_e_conteúdos">3.2.2. Utilizando URL de Imagens e Conteúdos</h4>
+<h4 id="_utilizando_url_de_imagens_e_conteúdos">4.2.2. Utilizando URL de Imagens e Conteúdos</h4>
 <div class="paragraph">
 <p>Quando está escrevendo uma região, se o componente contem um atributo com link ou media, as informações armazenadas são apenas IDs que precisam ser convertidos para URLs.
 Pode ser utilizado usando os seguintes métodos do shObject:</p>
@@ -869,7 +1358,7 @@ Pode ser utilizado usando os seguintes métodos do shObject:</p>
 <div id="footer">
 <div id="footer-text">
 Version 0.3.6<br>
-Last updated 2020-04-08 14:39:27 -0300
+Last updated 2020-04-08 22:06:51 -0300
 </div>
 </div>
 </body>

@@ -172,6 +172,180 @@ Este arquivo JAR é implementado quando você instala e configura o Shio CMS.
 ==== viglet-shio.conf
 O arquivo viglet-shio.conf especifica configurações do Shio CMS, podendo especificar variáveis e ajustes da JVM. O Shio CMS é baseado no Spring Boot 2, portanto todas as configurações presentes esta solução são validas. Mais informações em: https://docs.spring.io/spring-boot/docs/current/reference/html/deployment.html#deployment-script-customization-when-it-runs[Customizing a Script When It Runs, window="_blank"]
 
+== Funcionalidades
+
+=== General
+
+==== Search Ready
+Contents are indexed automatically. This way, you can use embedded search engine in your site. Simple and powerful.
+
+====  Native Cache
+Your site will be optimized with native cache. Faster and hassle free.
+
+====  Pure Javascript
+Entire development use directly themes using Javascript language. No deploy, just create and ready.
+
+====  Microservices
+Run Multi-container Docker applications using Docker Compose, integrating with Nginx, MariaDB and MongoDB.
+
+=== Modeling
+Create new Post Types with different attributes, that fit your business.
+
+==== Post Type
+* Define the Name, Description and Identifier for Post Type
+* Define how will responsible for publishing, that will receive a email always that Post of Post Type is published.
+
+==== Fields
+* Order the Fields of Post Type
+* Create a Text, Decription and Identifier for each Field
+* Define if the Field is Tite and/or Description of Post Type.
+
+===== Search Navigation
+Define how the content will be index into Viglet Turing
+
+* Search Field Association: Use default fields of Viglet Turing Semantic Navigation
+* Create Addtional Search Field: Use a custom field of Viglet Turing Semantic Navigation, can choose the same name of field or other.
+
+=== Configuration Console
+
+==== Auth Providers
+Define how the can be the authentication of Console:
+
+* Shio Native
+* OpenText Directory Service
+
+==== Exchange Providers
+Define the provider can be import content to Shio CMS. It is possible many instances of same provider.
+Supports the following Providers, 
+
+===== OTCS - OpenText Content Services
+Import Documents from OTCS
+
+===== OTMM - OpenText Media Management
+Import Files from OTMM
+
+==== Search Providers
+Define how the Search of Site will work.
+
+==== Email
+Configure the Email Service to send email for Notification.
+
+=== Users
+Allow create, modify or delete a user that can access the console or protect page of site.
+Associate the user to Groups
+
+=== Groups 
+Allow create, modify or delete a groups and add user into groups
+
+=== Administration
+* Reorder the posts into folder and show the results instantly into page of site.
+* Generate spreadsheet of folder, where each sheet is a Post Type.
+* Download the site
+* Import Site
+* Create Site with theme pre-defined
+* Create worflow
+* Create folders
+* Create post types
+* Create posts
+* Upload multiple files into folder
+* Change Folder View: List or Thumbnail
+* Navigate between folders through breadcrumb
+* Preview of Site using button "View Site"
+* See all commits changes of site
+
+
+==== Permissions
+
+===== Console
+Define Permission of Console, adding Groups and Users
+
+===== Page
+Define Permission of Pages of Site, adding Groups and Users
+
+==== Protected Page
+Through Page Permission the Site allow Protected Page, with Users defined on Administration Page
+
+==== Properties of Site
+* Name
+* Description
+* URL
+* Define the Association between Post Type and Page Layout
+* Define what content will be searchable
+* Define which Folder will be save posts of Form when the result be success.
+
+====  Search
+* Search global
+* Search posts per folder
+
+====  Order the list of objects of folder per:
+** Name
+** Description
+** Date
+
+====  Select objects of folder per:
+** Content
+** Folder
+** Everything
+** Invert Selection
+** Nothing
+
+==== Popup action on mouse over of Folder as:
+** Edit
+** Copy
+** Move
+** Clone
+** Delete
+** View Page
+** Clear Cache
+
+==== Popup action on mouse over of Post as:
+** Copy
+** Move
+** Clone
+** Delete
+** View Page
+** Clear Cache
+
+==== Select multiple objects and define an actions as:
+** Copy
+** Move
+** Delete
+
+=== Post Types
+
+System Post Types as: 
+
+==== Text
+==== Photo
+==== Video
+==== Quote
+==== Link
+==== File
+==== Region
+==== Theme
+==== Page Layout
+==== Alias
+==== Folder Index
+
+=== Field Types
+
+Create complex custom Post Types using many Field Types:
+
+==== Hidden
+==== Text
+==== Text Area
+==== Ace Editor - HTML
+==== Ace Editor - Javascript
+==== HTML Editor
+==== Content Select
+==== Relator
+==== Combo Box
+==== Recaptcha
+==== Form Configuration
+==== Date
+==== Multi Select
+==== Tab
+==== Check Box
 
 == Criando Page Layouts
 Neste capítulo descreve os tipos de Page Layout e explica com um template é construído. Incluem os seguintes tópicos:
