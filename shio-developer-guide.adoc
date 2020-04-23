@@ -212,6 +212,9 @@ Supports all databases supported of Spring Framework as:
 * If the post is published, but the post was changed, its status will be **Stale**.
 * If the post is unpublished will disappear on Site and its status will be **Unpublished**.
 
+=== GraphQL
+Allows access the Content using GraphQL
+
 === Modeling
 Create new Post Types with different attributes, that fit your business.
 
