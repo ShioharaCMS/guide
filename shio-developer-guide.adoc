@@ -1,80 +1,63 @@
-= Viglet Shio CMS: Guia do Desenvolvedor
+= Viglet Shio CMS: Developer Guide
 Viglet Team <opensource@viglet.com>
 :toc: left
 :toc-title: Tabela de Conteúdo
 :doctype: book
 :revnumber: 0.3.6 
-:revdate: 25-11-2019
-
-[preface]
-= Prefácio
-
-The basis for this documentation germinated when I awoke one morning and was confronted by the dark and stormy eyes of the chinchilla.
-She had conquered the mountain of government reports that, over the course of six months, had eroded into several minor foothills and a creeping alluvial plain of loose papers.
-
-== Sobre o Autor
-
-Você pode contactar Alexandre Oliveira em alexandre.oliveira@viglet.com.
-
-Alexandre Oliveira adora desenvolvimento de aplicações corporativas.
-
-[dedication]
-= Dedicatória
-
-Este livro é dedicado ao Enrico Shiohara, que ensinou tudo que sei sobre CMS.
+:revdate: 22-05-2020
 
 :numbered:
-== Introdução
-Neste capítulo provém conceitos e outras informações requeridas para realizar tarefas de desenvolvimento do Shio CMS
+== Introduction
+This chapter provides concepts and other information required to perform Shio CMS development tasks.
 
-Incluem os seguintes tópicos:
+Include the following topics:
 
-* <<Sobre o Shio CMS>>
-* <<O que será coberto neste livro>>
-* <<Documentações necessárias>>
+* <<About the Shio CMS>>
+* <<What will be covered in this book>>
+* <<Necessary documentation>>
 
-=== Sobre o Shio CMS
+=== About the Shio CMS
 
-O Viglet Shio CMS permite administradores e contribuidores usarem uma interface gráfica para definir como o conteúdo é apresentado nos web sites. A área de **Temas** é onde são gerenciados os objetos de apresentação. O **View Page** mostra a página completamente renderizada.
+Viglet Shio CMS allows administrators and contributors to use a graphical interface to define how content is presented on web sites. The **Themes** area is where presentation objects are managed. **View Page** shows the page completely rendered.
 
-Existem 2 tipos de visualização do site: **Management** e **Publicado**, onde:
+There are 2 types of site views: **Management** and **Published**, where:
 
-* **Management**: Contém todos os conteúdos do site, tanto publicados quanto despublicados e rascunhos
-* **Publicado**: Site que exibe apenas conteúdos publicados. É necessário publicar os conteúdos para que sejam exibidos.
+* **Management**: Contains all content on the site, both published and unpublished and drafts
+* ** Published**: Site that displays only published content. It is necessary to publish the contents for them to be displayed.
 
-O Shio CMS tem Page Layouts e Regions de exemplo, que podem ser vistos quando é criado o site, e pode servir de ponto de partida para criar seu site. Além disto possui formas de desenvolver e personalizar de forma programática estes templates, em que iremos discutir neste documento.
+The Shio CMS has example Page Layouts and Regions, which can be viewed when the site is created, and can serve as a starting point for creating your site. In addition, there are ways to programmatically develop and customize these templates, which we will discuss in this document.
 
-==== Page Layouts e Regions
+==== Page Layouts and Regions
 
-Um Page Layout é um bloco básico de construção para criar e gerenciar paginas usando padões repetidos. Cada página gerada é associada com exatamente um Page Layout, que controla o layout, tema e regiões na página.
+A Page Layout is a basic building block for creating and managing pages using repeated patterns. Each page generated is associated with exactly one Page Layout, which controls the layout, theme and regions on the page.
 
-O objetivo básico da apresentação é exibir pastas e conteúdos do repositório do Shio CMS como páginas web. Neste ponto é preciso associar pastas e conteúdos a Page Layouts.
+The basic purpose of the presentation is to display folders and contents from the Shio CMS repository as web pages. At this point, you need to associate folders and content with Page Layouts.
 
-Um único template pode ser aplicado para várias pastas e conteúdos, que facilita muito o processo de desenvolvimento e gerenciamento do site e permite uma aparência e características consistentes.
+A single template can be applied to various folders and content, which greatly facilitates the process of development and management of the website and allows for a consistent appearance and characteristics.
 
-O modelo mínimo é ter uma único Page Layout para todas as Pastas e um outro Page Layout  para todos os conteúdos. Muitos sites de clientes tem vários Page Layouts e pode ser construido usingo entre três e dez modelos. Cuidadosamente os Page Layouts são planejados e conseguentemente resulta em um desenvolvimento mais fácil e facilita manter o seu(s) site(s).
+The minimum model is to have a single Page Layout for all Folders and another Page Layout for all content. Many customer sites have multiple Page Layouts and can be built using between three and ten templates. Carefully the Page Layouts are planned and it results in an easier development and makes it easier to maintain your site (s).
 
-Uma região é uma área da página onde o conteúdo é renderizado. Os modelos são organizados em regiões. As regiões podem ser definidas como cacheadas ou não. Por exemplo, uma região de conteúdo poder ser especializada na apresentação de conteúdo, como regiões de cabeçalho e rodapé que nunca são alteradas e repetidas entre os Page Layouts e desta maneira definida como Cacheada. E as regiões não cacheadas são definidas no Page Layout específicas para cada apresentação.
+A region is an area of ​​the page where the content is rendered. Models are organized into regions. The regions can be defined as curly or not. For example, a content region may be specialized in presenting content, such as header and footer regions that are never changed and repeated between Page Layouts and thus defined as Cacheada. And the non-cached regions are defined in the Page Layout specific to each presentation.
 
 [#page-layout-4-regions]
-.Mostra um template com quatro regiões.
+.Shows a template with four regions.
 image::assets/page-layout-4-regions.png[width="50%" height="50%"]
 
-==== API para Componentes
+==== API for Components
 
-Em Page Layots e Regiões podem ter API para Componentes, que são responsávels poder renderizar tipos diferentes de fontes de conteúdos do repositório do Shio CMS. Por exemplo, um **Query Component** pode ser usado para filtar uma lista de conteúdos de uma pasta, enquanto um **Navigation Component** pode renderizar as pastas como menus em seu site.
+In Page Layots and Regions you can have API for Components, which are responsible for being able to render different types of content sources from the Shio CMS repository. For example, a **Query Component** can be used to filter a list of contents in a folder, while a **Navigation Component** can render folders as menus on your website.
 
 [#page-layout-components]
-.Page Layout com API de Componentes em suas regiões.
+.Page Layout with Component API in your regions.
 image::assets/page-layout-components.png[width="50%" height="50%"]
 
-A estrutura hierárquica deste template e suas regioes com API de Componentes é da seguinte forma:
+The hierarchical structure of this template and its regions with Component API is as follows:
 
 .Page Layout
-Região de Cabeçalho:: Navigation Component
-Região de Navegação:: Navigation Component
-Região de Conteúdo:: Query Component
-Região do Rodapé:: Navigation Component
+Header Region:: Navigation Component
+Navigation Region:: Navigation Component
+Content Region:: Query Component
+Footer Region:: Navigation Component
 
 NOTE: The header is optional.
 
