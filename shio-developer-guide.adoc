@@ -128,21 +128,15 @@ Neste capítulo descreve e ilustra aplicações, componentes e arquivos que são
 
 Para personalizar o Shio CMS, você deve implementar Java Archive (JAR) nas seguintes localizações:
 
-=== Diagrama de Implementação
-
-[#deployment-diagram]
-.Mostra a implementação de arquitetura do Shio CMS em detalhes e subsequente sessões discutidas nesta arquitetura.
-image::assets/deployment-diagram.png[width="50%" height="50%"]
-
 === Tabela de Deploy
 |===
 |Diretório |Arquivo implementado |Quem provê
 
-|<SHIOHARA_DIR>/
+|<SHIO_DIR>/
 |viglet-shio.jar
 |Shio
 
-|<SHIOHARA_DIR>/
+|<SHIO_DIR>/
 |viglet-shio.conf
 |Você
 |===

@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.10">
+<meta name="generator" content="Asciidoctor 2.0.15">
 <meta name="author" content="Viglet Team">
-<title>Viglet Shio CMS: Guia do Desenvolvedor</title>
+<title>Viglet Shio CMS: Developer Guide</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -48,7 +48,7 @@ textarea{overflow:auto;vertical-align:top}
 table{border-collapse:collapse;border-spacing:0}
 *,*::before,*::after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
 html,body{font-size:100%}
-body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;word-wrap:anywhere;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
 a:hover{cursor:pointer}
 img,object,embed{max-width:100%;height:auto}
 object,embed{height:100%}
@@ -63,10 +63,8 @@ img{-ms-interpolation-mode:bicubic}
 img,object,svg{display:inline-block;vertical-align:middle}
 textarea{height:auto;min-height:50px}
 select{width:100%}
-.center{margin-left:auto;margin-right:auto}
-.stretch{width:100%}
 .subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
-div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0;direction:ltr}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0}
 a{color:#2156a5;text-decoration:underline;line-height:inherit}
 a:hover,a:focus{color:#1d4b8f}
 a img{border:0}
@@ -97,28 +95,28 @@ dl dd{margin-bottom:1.25em}
 abbr,acronym{text-transform:uppercase;font-size:90%;color:rgba(0,0,0,.8);border-bottom:1px dotted #ddd;cursor:help}
 abbr{text-transform:none}
 blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
-blockquote cite{display:block;font-size:.9375em;color:rgba(0,0,0,.6)}
-blockquote cite::before{content:"\2014 \0020"}
-blockquote cite a,blockquote cite a:visited{color:rgba(0,0,0,.6)}
 blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
 @media screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
 h1{font-size:2.75em}
 h2{font-size:2.3125em}
 h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
 h4{font-size:1.4375em}}
-table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede}
+table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede;word-wrap:normal}
 table thead,table tfoot{background:#f7f8f7}
 table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
 table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
 table tr.even,table tr.alt{background:#f8f8f7}
-table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{line-height:1.6}
 h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
 h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+.center{margin-left:auto;margin-right:auto}
+.stretch{width:100%}
 .clearfix::before,.clearfix::after,.float-group::before,.float-group::after{content:" ";display:table}
 .clearfix::after,.float-group::after{clear:both}
-:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
-:not(pre)>code.nobreak{word-wrap:normal}
-:not(pre)>code.nowrap{white-space:nowrap}
+:not(pre).nobreak{word-wrap:normal}
+:not(pre).nowrap{white-space:nowrap}
+:not(pre).pre-wrap{white-space:pre-wrap}
+:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
 pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
 pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
 pre>code{display:block}
@@ -183,7 +181,7 @@ body.toc2.toc-right{padding-left:0;padding-right:20em}}
 #content #toc{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
 #content #toc>:first-child{margin-top:0}
 #content #toc>:last-child{margin-bottom:0}
-#footer{max-width:100%;background:rgba(0,0,0,.8);padding:1.25em}
+#footer{max-width:none;background:rgba(0,0,0,.8);padding:1.25em}
 #footer-text{color:rgba(255,255,255,.8);line-height:1.44}
 #content{margin-bottom:.625em}
 .sect1{padding-bottom:.625em}
@@ -206,7 +204,7 @@ table.tableblock #preamble>.sectionbody>[class="paragraph"]:first-of-type p{font
 .admonitionblock>table td.icon{text-align:center;width:80px}
 .admonitionblock>table td.icon img{max-width:none}
 .admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
-.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6)}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
 .admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
 .exampleblock>.content{border-style:solid;border-width:1px;border-color:#e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;-webkit-border-radius:4px;border-radius:4px}
 .exampleblock>.content>:first-child{margin-top:0}
@@ -216,7 +214,7 @@ table.tableblock #preamble>.sectionbody>[class="paragraph"]:first-of-type p{font
 .sidebarblock>:last-child{margin-bottom:0}
 .sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
 .exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
-.literalblock pre,.listingblock>.content>pre{-webkit-border-radius:4px;border-radius:4px;word-wrap:break-word;overflow-x:auto;padding:1em;font-size:.8125em}
+.literalblock pre,.listingblock>.content>pre{-webkit-border-radius:4px;border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
 @media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
 @media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
 .literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class="highlight"],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
@@ -261,22 +259,21 @@ pre.pygments .lineno::before{content:"";margin-right:-.125em}
 .quoteblock.excerpt>blockquote,.quoteblock .quoteblock{padding:0 0 .25em 1em;border-left:.25em solid #dddddf}
 .quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
 .quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
-.quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;text-align:left;margin-right:0}
-table.tableblock{max-width:100%;border-collapse:separate}
+.quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;font-size:.85rem;text-align:left;margin-right:0}
 p.tableblock:last-child{margin-bottom:0}
+td.tableblock>.content{margin-bottom:1.25em;word-wrap:anywhere}
 td.tableblock>.content>:last-child{margin-bottom:-1.25em}
-td.tableblock>.content>:last-child.sidebarblock{margin-bottom:0}
 table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
-table.grid-all>thead>tr>.tableblock,table.grid-all>tbody>tr>.tableblock{border-width:0 1px 1px 0}
-table.grid-all>tfoot>tr>.tableblock{border-width:1px 1px 0 0}
-table.grid-cols>*>tr>.tableblock{border-width:0 1px 0 0}
-table.grid-rows>thead>tr>.tableblock,table.grid-rows>tbody>tr>.tableblock{border-width:0 0 1px}
-table.grid-rows>tfoot>tr>.tableblock{border-width:1px 0 0}
-table.grid-all>*>tr>.tableblock:last-child,table.grid-cols>*>tr>.tableblock:last-child{border-right-width:0}
-table.grid-all>tbody>tr:last-child>.tableblock,table.grid-all>thead:last-child>tr>.tableblock,table.grid-rows>tbody>tr:last-child>.tableblock,table.grid-rows>thead:last-child>tr>.tableblock{border-bottom-width:0}
+table.grid-all>*>tr>*{border-width:1px}
+table.grid-cols>*>tr>*{border-width:0 1px}
+table.grid-rows>*>tr>*{border-width:1px 0}
 table.frame-all{border-width:1px}
+table.frame-ends{border-width:1px 0}
 table.frame-sides{border-width:0 1px}
-table.frame-topbot,table.frame-ends{border-width:1px 0}
+table.frame-none>colgroup+*>:first-child>*,table.frame-sides>colgroup+*>:first-child>*{border-top-width:0}
+table.frame-none>:last-child>:last-child>*,table.frame-sides>:last-child>:last-child>*{border-bottom-width:0}
+table.frame-none>*>tr>:first-child,table.frame-ends>*>tr>:first-child{border-left-width:0}
+table.frame-none>*>tr>:last-child,table.frame-ends>*>tr>:last-child{border-right-width:0}
 table.stripes-all tr,table.stripes-odd tr:nth-of-type(odd),table.stripes-even tr:nth-of-type(even),table.stripes-hover tr:hover{background:#f8f8f7}
 th.halign-left,td.halign-left{text-align:left}
 th.halign-right,td.halign-right{text-align:right}
@@ -285,7 +282,7 @@ th.valign-top,td.valign-top{vertical-align:top}
 th.valign-bottom,td.valign-bottom{vertical-align:bottom}
 th.valign-middle,td.valign-middle{vertical-align:middle}
 table thead th,table tfoot th{font-weight:bold}
-tbody tr th{display:table-cell;line-height:1.6;background:#f7f8f7}
+tbody tr th{background:#f7f8f7}
 tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
 p.tableblock>code:only-child{background:none;padding:0}
 p.tableblock{font-size:1em}
@@ -314,6 +311,7 @@ ol.lowergreek{list-style-type:lower-greek}
 .hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
 td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
 td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+td.hdlist2{word-wrap:anywhere}
 .literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
 .colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
 .colist td:not([class]):first-child img{max-width:none}
@@ -386,7 +384,7 @@ a span.icon>.fa{cursor:inherit}
 .admonitionblock td.icon .icon-warning::before{content:"\f071";color:#bf6900}
 .admonitionblock td.icon .icon-caution::before{content:"\f06d";color:#bf3400}
 .admonitionblock td.icon .icon-important::before{content:"\f06a";color:#bf0000}
-.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);-webkit-border-radius:100px;border-radius:100px;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);-webkit-border-radius:50%;border-radius:50%;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
 .conum[data-value] *{color:#fff!important}
 .conum[data-value]+b{display:none}
 .conum[data-value]::after{content:attr(data-value)}
@@ -413,6 +411,7 @@ thead{display:table-header-group}
 svg{max-width:100%}
 p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
 h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+#header,#content,#footnotes,#footer{max-width:none}
 #toc,.sidebarblock,.exampleblock>.content{background:none!important}
 #toc{border-bottom:1px solid #dddddf!important;padding-bottom:0!important}
 body.book #header{text-align:center}
@@ -439,22 +438,19 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="book toc2 toc-left">
 <div id="header">
-<h1>Viglet Shio CMS: Guia do Desenvolvedor</h1>
+<h1>Viglet Shio CMS: Developer Guide</h1>
 <div class="details">
 <span id="author" class="author">Viglet Team</span><br>
 <span id="email" class="email"><a href="mailto:opensource@viglet.com">opensource@viglet.com</a></span><br>
 <span id="revnumber">version 0.3.6,</span>
-<span id="revdate">25-11-2019</span>
+<span id="revdate">22-05-2020</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Tabela de Conteúdo</div>
 <ul class="sectlevel1">
-<li><a href="#_prefácio">Prefácio</a></li>
-<li><a href="#_sobre_o_autor">Sobre o Autor</a></li>
-<li><a href="#_dedicatória">Dedicatória</a></li>
-<li><a href="#_introdução">1. Introdução</a>
+<li><a href="#_introduction">1. Introduction</a>
 <ul class="sectlevel2">
-<li><a href="#_sobre_o_shio_cms">1.1. Sobre o Shio CMS</a></li>
+<li><a href="#_about_the_shio_cms">1.1. About the Shio CMS</a></li>
 <li><a href="#_o_que_será_coberto_neste_livro">1.2. O que será coberto neste livro</a></li>
 <li><a href="#_documentações_necessárias">1.3. Documentações necessárias</a></li>
 </ul>
@@ -462,9 +458,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_arquitetura_de_implementação">2. Arquitetura de Implementação</a>
 <ul class="sectlevel2">
 <li><a href="#_visão_geral">2.1. Visão Geral</a></li>
-<li><a href="#_diagrama_de_implementação">2.2. Diagrama de Implementação</a></li>
-<li><a href="#_tabela_de_deploy">2.3. Tabela de Deploy</a></li>
-<li><a href="#_explicação_do_diagrama_e_da_tabela">2.4. Explicação do Diagrama e da Tabela</a></li>
+<li><a href="#_tabela_de_deploy">2.2. Tabela de Deploy</a></li>
+<li><a href="#_explicação_do_diagrama_e_da_tabela">2.3. Explicação do Diagrama e da Tabela</a></li>
 </ul>
 </li>
 <li><a href="#_features">3. Features</a>
@@ -474,13 +469,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_on_install">3.3. On Install</a></li>
 <li><a href="#_version_control">3.4. Version Control</a></li>
 <li><a href="#_publishing">3.5. Publishing</a></li>
-<li><a href="#_modeling">3.6. Modeling</a></li>
-<li><a href="#_configuration_console">3.7. Configuration Console</a></li>
-<li><a href="#_users">3.8. Users</a></li>
-<li><a href="#_groups">3.9. Groups</a></li>
-<li><a href="#_administration">3.10. Administration</a></li>
-<li><a href="#_post_types">3.11. Post Types</a></li>
-<li><a href="#_field_types">3.12. Field Types</a></li>
+<li><a href="#_graphql">3.6. GraphQL</a></li>
+<li><a href="#_modeling">3.7. Modeling</a></li>
+<li><a href="#_configuration_console">3.8. Configuration Console</a></li>
+<li><a href="#_users">3.9. Users</a></li>
+<li><a href="#_groups">3.10. Groups</a></li>
+<li><a href="#_administration">3.11. Administration</a></li>
+<li><a href="#_post_types">3.12. Post Types</a></li>
+<li><a href="#_field_types">3.13. Field Types</a></li>
 </ul>
 </li>
 <li><a href="#_criando_page_layouts">4. Criando Page Layouts</a>
@@ -495,130 +491,102 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_prefácio">Prefácio</h2>
+<h2 id="_introduction">1. Introduction</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The basis for this documentation germinated when I awoke one morning and was confronted by the dark and stormy eyes of the chinchilla.
-She had conquered the mountain of government reports that, over the course of six months, had eroded into several minor foothills and a creeping alluvial plain of loose papers.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_sobre_o_autor">Sobre o Autor</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Você pode contactar Alexandre Oliveira em <a href="mailto:alexandre.oliveira@viglet.com">alexandre.oliveira@viglet.com</a>.</p>
+<p>This chapter provides concepts and other information required to perform Shio CMS development tasks.</p>
 </div>
 <div class="paragraph">
-<p>Alexandre Oliveira adora desenvolvimento de aplicações corporativas.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_dedicatória">Dedicatória</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Este livro é dedicado ao Enrico Shiohara, que ensinou tudo que sei sobre CMS.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_introdução">1. Introdução</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Neste capítulo provém conceitos e outras informações requeridas para realizar tarefas de desenvolvimento do Shio CMS</p>
-</div>
-<div class="paragraph">
-<p>Incluem os seguintes tópicos:</p>
+<p>Include the following topics:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#_sobre_o_shio_cms">Sobre o Shio CMS</a></p>
+<p><a href="#_about_the_shio_cms">About the Shio CMS</a></p>
 </li>
 <li>
-<p><a href="#_o_que_será_coberto_neste_livro">O que será coberto neste livro</a></p>
+<p><a href="#What will be covered in this book">[What will be covered in this book]</a></p>
 </li>
 <li>
-<p><a href="#_documentações_necessárias">Documentações necessárias</a></p>
+<p><a href="#Necessary documentation">[Necessary documentation]</a></p>
 </li>
 </ul>
 </div>
 <div class="sect2">
-<h3 id="_sobre_o_shio_cms">1.1. Sobre o Shio CMS</h3>
+<h3 id="_about_the_shio_cms">1.1. About the Shio CMS</h3>
 <div class="paragraph">
-<p>O Viglet Shio CMS permite administradores e contribuidores usarem uma interface gráfica para definir como o conteúdo é apresentado nos web sites. A área de <strong>Temas</strong> é onde são gerenciados os objetos de apresentação. O <strong>View Page</strong> mostra a página completamente renderizada.</p>
+<p>Viglet Shio CMS allows administrators and contributors to use a graphical interface to define how content is presented on web sites. The <strong>Themes</strong> area is where presentation objects are managed. <strong>View Page</strong> shows the page completely rendered.</p>
 </div>
 <div class="paragraph">
-<p>Existem 2 tipos de visualização do site: <strong>Management</strong> e <strong>Publicado</strong>, onde:</p>
+<p>There are 2 types of site views: <strong>Management</strong> and <strong>Published</strong>, where:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Management</strong>: Contém todos os conteúdos do site, tanto publicados quanto despublicados e rascunhos</p>
+<p><strong>Management</strong>: Contains all content on the site, both published and unpublished and drafts</p>
 </li>
 <li>
-<p><strong>Publicado</strong>: Site que exibe apenas conteúdos publicados. É necessário publicar os conteúdos para que sejam exibidos.</p>
+<p><strong> Published</strong>: Site that displays only published content. It is necessary to publish the contents for them to be displayed.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>O Shio CMS tem Page Layouts e Regions de exemplo, que podem ser vistos quando é criado o site, e pode servir de ponto de partida para criar seu site. Além disto possui formas de desenvolver e personalizar de forma programática estes templates, em que iremos discutir neste documento.</p>
+<p>The Shio CMS has example Page Layouts and Regions, which can be viewed when the site is created, and can serve as a starting point for creating your site. In addition, there are ways to programmatically develop and customize these templates, which we will discuss in this document.</p>
 </div>
 <div class="sect3">
-<h4 id="_page_layouts_e_regions">1.1.1. Page Layouts e Regions</h4>
+<h4 id="_page_layouts_and_regions">1.1.1. Page Layouts and Regions</h4>
 <div class="paragraph">
-<p>Um Page Layout é um bloco básico de construção para criar e gerenciar paginas usando padões repetidos. Cada página gerada é associada com exatamente um Page Layout, que controla o layout, tema e regiões na página.</p>
+<p>A Page Layout is a basic building block for creating and managing pages using repeated patterns. Each page generated is associated with exactly one Page Layout, which controls the layout, theme and regions on the page.</p>
 </div>
 <div class="paragraph">
-<p>O objetivo básico da apresentação é exibir pastas e conteúdos do repositório do Shio CMS como páginas web. Neste ponto é preciso associar pastas e conteúdos a Page Layouts.</p>
+<p>The basic purpose of the presentation is to display folders and contents from the Shio CMS repository as web pages. At this point, you need to associate folders and content with Page Layouts.</p>
 </div>
 <div class="paragraph">
-<p>Um único template pode ser aplicado para várias pastas e conteúdos, que facilita muito o processo de desenvolvimento e gerenciamento do site e permite uma aparência e características consistentes.</p>
+<p>A single template can be applied to various folders and content, which greatly facilitates the process of development and management of the website and allows for a consistent appearance and characteristics.</p>
 </div>
 <div class="paragraph">
-<p>O modelo mínimo é ter uma único Page Layout para todas as Pastas e um outro Page Layout  para todos os conteúdos. Muitos sites de clientes tem vários Page Layouts e pode ser construido usingo entre três e dez modelos. Cuidadosamente os Page Layouts são planejados e conseguentemente resulta em um desenvolvimento mais fácil e facilita manter o seu(s) site(s).</p>
+<p>The minimum model is to have a single Page Layout for all Folders and another Page Layout for all content. Many customer sites have multiple Page Layouts and can be built using between three and ten templates. Carefully the Page Layouts are planned and it results in an easier development and makes it easier to maintain your site (s).</p>
 </div>
 <div class="paragraph">
-<p>Uma região é uma área da página onde o conteúdo é renderizado. Os modelos são organizados em regiões. As regiões podem ser definidas como cacheadas ou não. Por exemplo, uma região de conteúdo poder ser especializada na apresentação de conteúdo, como regiões de cabeçalho e rodapé que nunca são alteradas e repetidas entre os Page Layouts e desta maneira definida como Cacheada. E as regiões não cacheadas são definidas no Page Layout específicas para cada apresentação.</p>
+<p>A region is an area of ​​the page where the content is rendered. Models are organized into regions. The regions can be defined as curly or not. For example, a content region may be specialized in presenting content, such as header and footer regions that are never changed and repeated between Page Layouts and thus defined as Cacheada. And the non-cached regions are defined in the Page Layout specific to each presentation.</p>
 </div>
 <div id="page-layout-4-regions" class="imageblock">
 <div class="content">
 <img src="assets/page-layout-4-regions.png" alt="page layout 4 regions" width="50%" height="50%">
 </div>
-<div class="title">Figure 1. Mostra um template com quatro regiões.</div>
+<div class="title">Figure 1. Shows a template with four regions.</div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_api_para_componentes">1.1.2. API para Componentes</h4>
+<h4 id="_api_for_components">1.1.2. API for Components</h4>
 <div class="paragraph">
-<p>Em Page Layots e Regiões podem ter API para Componentes, que são responsávels poder renderizar tipos diferentes de fontes de conteúdos do repositório do Shio CMS. Por exemplo, um <strong>Query Component</strong> pode ser usado para filtar uma lista de conteúdos de uma pasta, enquanto um <strong>Navigation Component</strong> pode renderizar as pastas como menus em seu site.</p>
+<p>In Page Layots and Regions you can have API for Components, which are responsible for being able to render different types of content sources from the Shio CMS repository. For example, a <strong>Query Component</strong> can be used to filter a list of contents in a folder, while a <strong>Navigation Component</strong> can render folders as menus on your website.</p>
 </div>
 <div id="page-layout-components" class="imageblock">
 <div class="content">
 <img src="assets/page-layout-components.png" alt="page layout components" width="50%" height="50%">
 </div>
-<div class="title">Figure 2. Page Layout com API de Componentes em suas regiões.</div>
+<div class="title">Figure 2. Page Layout with Component API in your regions.</div>
 </div>
 <div class="paragraph">
-<p>A estrutura hierárquica deste template e suas regioes com API de Componentes é da seguinte forma:</p>
+<p>The hierarchical structure of this template and its regions with Component API is as follows:</p>
 </div>
 <div class="dlist">
 <div class="title">Page Layout</div>
 <dl>
-<dt class="hdlist1">Região de Cabeçalho</dt>
+<dt class="hdlist1">Header Region</dt>
 <dd>
 <p>Navigation Component</p>
 </dd>
-<dt class="hdlist1">Região de Navegação</dt>
+<dt class="hdlist1">Navigation Region</dt>
 <dd>
 <p>Navigation Component</p>
 </dd>
-<dt class="hdlist1">Região de Conteúdo</dt>
+<dt class="hdlist1">Content Region</dt>
 <dd>
 <p>Query Component</p>
 </dd>
-<dt class="hdlist1">Região do Rodapé</dt>
+<dt class="hdlist1">Footer Region</dt>
 <dd>
 <p>Navigation Component</p>
 </dd>
@@ -721,7 +689,7 @@ The header is optional.
 <p><a href="#_visão_geral">Visão Geral</a></p>
 </li>
 <li>
-<p><a href="#_diagrama_de_implementação">Diagrama de Implementação</a></p>
+<p><a href="#Diagrama de Implementação">[Diagrama de Implementação]</a></p>
 </li>
 <li>
 <p><a href="#_tabela_de_deploy">Tabela de Deploy</a></p>
@@ -738,16 +706,7 @@ The header is optional.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_diagrama_de_implementação">2.2. Diagrama de Implementação</h3>
-<div id="deployment-diagram" class="imageblock">
-<div class="content">
-<img src="assets/deployment-diagram.png" alt="deployment diagram" width="50%" height="50%">
-</div>
-<div class="title">Figure 3. Mostra a implementação de arquitetura do Shio CMS em detalhes e subsequente sessões discutidas nesta arquitetura.</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_tabela_de_deploy">2.3. Tabela de Deploy</h3>
+<h3 id="_tabela_de_deploy">2.2. Tabela de Deploy</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 33.3333%;">
@@ -763,12 +722,12 @@ The header is optional.
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;SHIOHARA_DIR&gt;/</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;SHIO_DIR&gt;/</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">viglet-shio.jar</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Shio</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;SHIOHARA_DIR&gt;/</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;SHIO_DIR&gt;/</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">viglet-shio.conf</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Você</p></td>
 </tr>
@@ -776,15 +735,15 @@ The header is optional.
 </table>
 </div>
 <div class="sect2">
-<h3 id="_explicação_do_diagrama_e_da_tabela">2.4. Explicação do Diagrama e da Tabela</h3>
+<h3 id="_explicação_do_diagrama_e_da_tabela">2.3. Explicação do Diagrama e da Tabela</h3>
 <div class="sect3">
-<h4 id="_viglet_shio_jar">2.4.1. viglet.shio.jar</h4>
+<h4 id="_viglet_shio_jar">2.3.1. viglet.shio.jar</h4>
 <div class="paragraph">
 <p>Este arquivo JAR é implementado quando você instala e configura o Shio CMS.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_viglet_shio_conf">2.4.2. viglet-shio.conf</h4>
+<h4 id="_viglet_shio_conf">2.3.2. viglet-shio.conf</h4>
 <div class="paragraph">
 <p>O arquivo viglet-shio.conf especifica configurações do Shio CMS, podendo especificar variáveis e ajustes da JVM. O Shio CMS é baseado no Spring Boot 2, portanto todas as configurações presentes esta solução são validas. Mais informações em: <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/deployment.html#deployment-script-customization-when-it-runs" target="_blank" rel="noopener">Customizing a Script When It Runs</a></p>
 </div>
@@ -890,12 +849,18 @@ The header is optional.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_modeling">3.6. Modeling</h3>
+<h3 id="_graphql">3.6. GraphQL</h3>
+<div class="paragraph">
+<p>Allows access the Content using GraphQL</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_modeling">3.7. Modeling</h3>
 <div class="paragraph">
 <p>Create new Post Types with different attributes, that fit your business.</p>
 </div>
 <div class="sect3">
-<h4 id="_post_type">3.6.1. Post Type</h4>
+<h4 id="_post_type">3.7.1. Post Type</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -908,7 +873,7 @@ The header is optional.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_fields">3.6.2. Fields</h4>
+<h4 id="_fields">3.7.2. Fields</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -941,9 +906,9 @@ The header is optional.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_configuration_console">3.7. Configuration Console</h3>
+<h3 id="_configuration_console">3.8. Configuration Console</h3>
 <div class="sect3">
-<h4 id="_auth_providers">3.7.1. Auth Providers</h4>
+<h4 id="_auth_providers">3.8.1. Auth Providers</h4>
 <div class="paragraph">
 <p>Define how the can be the authentication of Console:</p>
 </div>
@@ -959,7 +924,7 @@ The header is optional.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_exchange_providers">3.7.2. Exchange Providers</h4>
+<h4 id="_exchange_providers">3.8.2. Exchange Providers</h4>
 <div class="paragraph">
 <p>Define the provider can be import content to Shio CMS. It is possible many instances of same provider.
 Supports the following Providers,</p>
@@ -978,33 +943,33 @@ Supports the following Providers,</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_search_providers">3.7.3. Search Providers</h4>
+<h4 id="_search_providers">3.8.3. Search Providers</h4>
 <div class="paragraph">
 <p>Define how the Search of Site will work.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_email">3.7.4. Email</h4>
+<h4 id="_email">3.8.4. Email</h4>
 <div class="paragraph">
 <p>Configure the Email Service to send email for Notification.</p>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_users">3.8. Users</h3>
+<h3 id="_users">3.9. Users</h3>
 <div class="paragraph">
 <p>Allow create, modify or delete a user that can access the console or protect page of site.
 Associate the user to Groups</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_groups">3.9. Groups</h3>
+<h3 id="_groups">3.10. Groups</h3>
 <div class="paragraph">
 <p>Allow create, modify or delete a groups and add user into groups</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_administration">3.10. Administration</h3>
+<h3 id="_administration">3.11. Administration</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1052,7 +1017,7 @@ Associate the user to Groups</p>
 </ul>
 </div>
 <div class="sect3">
-<h4 id="_permissions">3.10.1. Permissions</h4>
+<h4 id="_permissions">3.11.1. Permissions</h4>
 <div class="sect4">
 <h5 id="_console">Console</h5>
 <div class="paragraph">
@@ -1067,13 +1032,13 @@ Associate the user to Groups</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_protected_page">3.10.2. Protected Page</h4>
+<h4 id="_protected_page">3.11.2. Protected Page</h4>
 <div class="paragraph">
 <p>Through Page Permission the Site allow Protected Page, with Users defined on Administration Page</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_properties_of_site">3.10.3. Properties of Site</h4>
+<h4 id="_properties_of_site">3.11.3. Properties of Site</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1098,7 +1063,7 @@ Associate the user to Groups</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_search">3.10.4. Search</h4>
+<h4 id="_search">3.11.4. Search</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1111,7 +1076,7 @@ Associate the user to Groups</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_order_the_list_of_objects_of_folder_per">3.10.5. Order the list of objects of folder per:</h4>
+<h4 id="_order_the_list_of_objects_of_folder_per">3.11.5. Order the list of objects of folder per:</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1127,7 +1092,7 @@ Associate the user to Groups</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_select_objects_of_folder_per">3.10.6. Select objects of folder per:</h4>
+<h4 id="_select_objects_of_folder_per">3.11.6. Select objects of folder per:</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1149,7 +1114,7 @@ Associate the user to Groups</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_popup_action_on_mouse_over_of_folder_as">3.10.7. Popup action on mouse over of Folder as:</h4>
+<h4 id="_popup_action_on_mouse_over_of_folder_as">3.11.7. Popup action on mouse over of Folder as:</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1177,7 +1142,7 @@ Associate the user to Groups</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_popup_action_on_mouse_over_of_post_as">3.10.8. Popup action on mouse over of Post as:</h4>
+<h4 id="_popup_action_on_mouse_over_of_post_as">3.11.8. Popup action on mouse over of Post as:</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1202,7 +1167,7 @@ Associate the user to Groups</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_select_multiple_objects_and_define_an_actions_as">3.10.9. Select multiple objects and define an actions as:</h4>
+<h4 id="_select_multiple_objects_and_define_an_actions_as">3.11.9. Select multiple objects and define an actions as:</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1219,118 +1184,118 @@ Associate the user to Groups</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_post_types">3.11. Post Types</h3>
+<h3 id="_post_types">3.12. Post Types</h3>
 <div class="paragraph">
 <p>System Post Types as:</p>
 </div>
 <div class="sect3">
-<h4 id="_text">3.11.1. Text</h4>
+<h4 id="_text">3.12.1. Text</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_photo">3.11.2. Photo</h4>
+<h4 id="_photo">3.12.2. Photo</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_video">3.11.3. Video</h4>
+<h4 id="_video">3.12.3. Video</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_quote">3.11.4. Quote</h4>
+<h4 id="_quote">3.12.4. Quote</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_link">3.11.5. Link</h4>
+<h4 id="_link">3.12.5. Link</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_file">3.11.6. File</h4>
+<h4 id="_file">3.12.6. File</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_region">3.11.7. Region</h4>
+<h4 id="_region">3.12.7. Region</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_theme">3.11.8. Theme</h4>
+<h4 id="_theme">3.12.8. Theme</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_page_layout">3.11.9. Page Layout</h4>
+<h4 id="_page_layout">3.12.9. Page Layout</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_alias">3.11.10. Alias</h4>
+<h4 id="_alias">3.12.10. Alias</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_folder_index">3.11.11. Folder Index</h4>
+<h4 id="_folder_index">3.12.11. Folder Index</h4>
 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_field_types">3.12. Field Types</h3>
+<h3 id="_field_types">3.13. Field Types</h3>
 <div class="paragraph">
 <p>Create complex custom Post Types using many Field Types:</p>
 </div>
 <div class="sect3">
-<h4 id="_hidden">3.12.1. Hidden</h4>
+<h4 id="_hidden">3.13.1. Hidden</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_text_2">3.12.2. Text</h4>
+<h4 id="_text_2">3.13.2. Text</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_text_area">3.12.3. Text Area</h4>
+<h4 id="_text_area">3.13.3. Text Area</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_ace_editor_html">3.12.4. Ace Editor - HTML</h4>
+<h4 id="_ace_editor_html">3.13.4. Ace Editor - HTML</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_ace_editor_javascript">3.12.5. Ace Editor - Javascript</h4>
+<h4 id="_ace_editor_javascript">3.13.5. Ace Editor - Javascript</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_html_editor">3.12.6. HTML Editor</h4>
+<h4 id="_html_editor">3.13.6. HTML Editor</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_content_select">3.12.7. Content Select</h4>
+<h4 id="_content_select">3.13.7. Content Select</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_relator">3.12.8. Relator</h4>
+<h4 id="_relator">3.13.8. Relator</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_combo_box">3.12.9. Combo Box</h4>
+<h4 id="_combo_box">3.13.9. Combo Box</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_recaptcha">3.12.10. Recaptcha</h4>
+<h4 id="_recaptcha">3.13.10. Recaptcha</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_form_configuration">3.12.11. Form Configuration</h4>
+<h4 id="_form_configuration">3.13.11. Form Configuration</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_date">3.12.12. Date</h4>
+<h4 id="_date">3.13.12. Date</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_multi_select">3.12.13. Multi Select</h4>
+<h4 id="_multi_select">3.13.13. Multi Select</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_tab">3.12.14. Tab</h4>
+<h4 id="_tab">3.13.14. Tab</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_check_box">3.12.15. Check Box</h4>
+<h4 id="_check_box">3.13.15. Check Box</h4>
 
 </div>
 </div>
@@ -1429,7 +1394,7 @@ Pode ser utilizado usando os seguintes métodos do shObject:</p>
 <div id="footer">
 <div id="footer-text">
 Version 0.3.6<br>
-Last updated 2020-04-08 22:33:31 -0300
+Last updated 2021-06-29 22:05:35 -0300
 </div>
 </div>
 </body>
